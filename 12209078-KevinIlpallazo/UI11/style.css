@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@500&family=Roboto:ital,wght@0,400;1,300&family=Varela+Round&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #36393f; 
+  color: white; 
+  background-image: url('bekron.jpg'); 
+  background-attachment: fixed;
+}
+
+.header {
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    color: white;
+    margin-top: 100px; 
+    margin-bottom: 100px; 
+  }
+  
+  .blue-letter {
+    color: #007bff; 
+    font-weight: bold;
+  }
+
+.form-container {
+  background-color: #202225; 
+  width: 90%;
+  max-width: 467px;
+  padding: 20px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.form-container h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: rgb(254, 255, 255);
+}
+
+.form-container label {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+h4 {
+  color: rgb(255, 255, 255);
+}
+
+.output h4.error-message {
+    color: #f04747; 
+  }
+
+.form-container button {
+  margin-top: 15px;
+  background-color: #7289da; 
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #677bc4; 
+}
+
+input[type="number"] {
+  background-color: #2e3338;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  padding: 6px 8px;
+  margin-bottom: 4px;
+}
+
+.form-group {
+  text-align: left;
+  margin-top: 10px;
+}
+
+input[type="submit"].btn {
+  background-color: #7289da; 
+  color: white;
+  border: none;
+  padding: 8px 16px; 
+  border-radius: 5px;
+  font-size: 14px; 
+  cursor: pointer;
+}
+
+
+input[type="submit"].btn:hover {
+  background-color: #677bc4; 
+}
+
+.form-container input:focus {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.output {
+  margin-top: 17px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.top-input {
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%; /* Adjust the width for smaller screens */
+    max-width: 100%; /* Make the form container occupy full width */
+    padding: 15px; /* Adjust padding for smaller screens */
+    margin-top: 30px; /* Adjust margin for smaller screens */
+  }
+
+  .header h1 {
+    font-size: 28px; /* Decrease font size for smaller screens */
+    margin-top: 60px; /* Adjust margin for smaller screens */
+    margin-bottom: 60px; /* Adjust margin for smaller screens */
+  }
+  
+}
