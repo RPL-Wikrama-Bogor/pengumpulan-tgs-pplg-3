@@ -1,0 +1,10 @@
+.h1 {
+    color: aqua;
+}
+
+.img {
+    width: 100%;
+    background-image: url('img/undefined\ -\ Imgur.gif');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
