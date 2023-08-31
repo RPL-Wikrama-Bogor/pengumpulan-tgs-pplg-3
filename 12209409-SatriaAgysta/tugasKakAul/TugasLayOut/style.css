@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: #0e0d0d;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    position: sticky; /* Perbaikan: Mengubah stiky menjadi sticky */
+    color: #F5FEFD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+	border-radius: 5px;
+}
+  
+.logo {
+    font-size: 24px;
+    color: #F5FEFD;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #f51010;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+  
+.nav-links li a {
+    text-decoration: none;
+    color: #475052;
+    transition: color 0.3s ease;
+    position: relative;
+}
+  
+.nav-links li a:hover {
+    color: #f51010;
+}
+
+.nav-links li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: transparent;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+    transform-origin: bottom right;
+}
+
+.nav-links li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+    background-color: #f51010;
+}
+
+.header {
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+
+.header img {
+	max-width: 100%; /* Ensure the image fits the screen width */
+	height: auto; /* Maintain aspect ratio */
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #be2929;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 50px;
+	margin-top: -40px;
+	transition: background-color 0.3s ease; /* Efek hover pada latar belakang */
+}
+
+/* Efek hover */
+.button:hover {
+	background-color: #f51010; /* Warna yang berbeda ketika dihover */
+}
+
+.overlay-text {
+	position: absolute; /* Position the text absolutely within the .header */
+	top: 65%; /* Position the text vertically centered */
+	left: 50%; /* Position the text horizontally centered */
+	transform: translate(-50%, -50%); /* Center the text perfectly */
+	color: #fff; /* Text color */
+	padding: 10px; /* Add padding to the text */
+	font-size: 20px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
+}
+
+.overlay-text a {
+	text-decoration: none;
+}
+
+.overlay-text h1 {
+	font-size: 80px;
+}
+
+.baris{
+	box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+.text {
+    flex: 1; /* Bagian teks akan mengambil sebagian besar lebar tersedia */
+    padding: 20px; /* Jarak antara teks dan gambar */
+    font-size: 17px;
+}
+
+.image {
+    flex: 1; /* Bagian gambar akan mengambil sebagian besar lebar tersedia */
+}
+
+.image img {
+    max-width: 100%; /* Menghindari gambar melampaui lebar parent */
+	border-radius: 10px;
+}
+
+.content {
+    box-shadow: 8.5px 8.5px 7px 0 rgba(255, 255, 255, 0.786);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    width: 600px;
+    position: relative;
+	border: 1px solid #ccc;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    border: 1px solid #000;
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #be2929;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f51010;
+    transform: scale(1.02);
+}
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* Empat kolom */
+	gap: 20px; /* Jarak antara card */
+	justify-items: center; /* Rata tengah horizontal */
+	align-items: center; /* Rata tengah vertikal */
+	text-align: center;
+	max-width: 1100px; /* Lebar maksimum untuk mengatur jumlah card */
+	margin: 0 auto; /* Membuat card-grid berada di tengah layar */
+}
+
+.card {
+	background-color: #fff;
+	padding: 10px; /* Mengurangi padding agar card lebih kecil */
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s; /* Transisi untuk efek zoom */
+}
+
+.card img {
+	max-width: 100%; /* Agar gambar tidak melebihi ukuran card */
+	height: auto;
+	margin-bottom: 5px;
+	transition: transform 0.2s; /* Transisi untuk efek zoom */
+}
+
+.card:hover {
+	transform: scale(1.05); /* Memperbesar card saat cursor mengarah */
+}
+
+.card:hover img {
+	transform: scale(1.05); /* Memperbesar gambar saat cursor mengarah */
+}
+
+.card h2 {
+	font-size: 14px; /* Mengurangi ukuran font untuk card yang lebih kecil */
+	margin: 0;
+}
+
+.card p {
+	font-size: 12px; /* Mengurangi ukuran font untuk card yang lebih kecil */
+	color: #555;
+}
+
+.hasil {
+	box-shadow: 8.5px 8.5px 7px 0 rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 600px;
+    position: relative;
+	border: 1px solid #ccc;
+}
+
+.hal {
+    padding-top: 50px;
+	display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom dengan lebar yang sama */
+    gap: 20px; /* Jarak antara kolom */
+    justify-items: center; /* Rata tengah horizontal */
+    align-items: center; /* Rata tengah vertikal */
+    position: relative;
+}
+
+.context {
+    display: flex;
+    border: #000;
+}
+
+.image1 {
+    flex: 1; /* Bagian gambar akan mengambil sebagian besar lebar tersedia */
+}
+
+.image1 img {
+    max-width: 40%; /* Menghindari gambar melampaui lebar parent */
+	border-radius: 10px;
+}
