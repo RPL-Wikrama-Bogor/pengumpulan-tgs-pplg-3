@@ -1,0 +1,5 @@
+Operator Ceil= adalah operator yang membulatkan hasil bilangan desimal keatas
+         floor= adalah operator yang membulatkan hasil bilangan desimal kebawah
+         round= adalah operator yang membulatkan hasil bilangan desimal mendekati bilangan 
+         yang ada dibelakang koma, jika angka dibelakang koma dibawah 5 maka dibulatkan ke bawah
+         , jika angka dibelakang koma diatas lima maka dibulatkan ke atas
