@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaji</title>
+    <title>Suhu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,7 +30,6 @@
             margin-bottom: 5px;
         }
 
-        input[type="text"],
         input[type="number"] {
             width: 100%;
             padding: 10px;
@@ -57,41 +55,35 @@
         p.result {
             font-size: 18px;
             margin-top: 20px;
-            text-align: left;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <form action="" method="post">
-            <label for="nama">Masukkan Nama anda:</label>
-            <input type="text" name="nama" id="nama">
-
-            <label for="gaji_pokok">Masukkan Gaji Pokok anda:</label>
-            <input type="number" name="gaji_pokok" id="gaji_pokok">
-
+            <label for="suhu_fh">Angka suhu fahrenheit:</label>
+            <input type="number" id="suhu_fh" name="suhu_fh">
             <br>
             <button type="submit" name="submit">Kirim</button>
         </form>
         <?php
-        $nama = "";
-        $tunj;
-        $pjk;
-        $gaji_bersih;
-        $gaji_pokok;
+        $suhu_fh;
+        $celcius;
+        $dingin;
+        $normal;
+        $panas;
 
         if (isset($_POST['submit'])) {
-            $nama = $_POST['nama'];
-            $gaji_pokok = $_POST['gaji_pokok'];
+            $suhu_fh = $_POST['suhu_fh'];
+            $celcius = ($suhu_fh - 32) / 1.8;
 
-            $tunj = (20 * $gaji_pokok) / 100;
-            $pjk = (15 * ($gaji_pokok + $tunj)) / 100;
-            $gaji_bersih = $gaji_pokok + $tunj - $pjk;
-
-            echo '<p class="result">Nama: ' . $nama . '<br>';
-            echo 'Tunjangan: Rp ' . $tunj . '<br>';
-            echo 'Pajak: Rp ' . $pjk . '<br>';
-            echo 'Gaji Bersih: Rp ' . $gaji_bersih . '</p>';
+            if ($celcius > 30) {
+                echo '<p class="result">Hasil konversi ke Celsius: ' . $celcius . '°C<br>Panas</p>';
+            } else if ($celcius > 10) {
+                echo '<p class="result">Hasil konversi ke Celsius: ' . $celcius . '°C<br>Dingin</p>';
+            } else {
+                echo '<p class="result">Hasil konversi ke Celsius: ' . $celcius . '°C<br>Normal</p>';
+            }
         }
         ?>
     </div>

@@ -15,37 +15,36 @@ $tanggal_lahir;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bulan kelahiran</title>
-    <style>
-        body{
-            background-image: url(backround.jpg);
-            background-size: cover;
-            width: 550;
-            max-width: 100%;
-            font-size: 20px;
-            color: white;
-        }
-        
-        .card{
-            padding: 30px 50px;
-            position: center;
-            text-align: center;
-            z-index: 4;
-            max-width: 100%;
-            background-color: rgba(225,225,225,0.082);
-            border-radius: 10px;
-        }
-
-        button[type="submit"] {
-            background-color: white;
-            max-width: 100%;
-            width: 100px;
-            height: 50px;
-            border-radius: 10px;
-
-        }
-         
-    </style>
 </head>
+<style>
+/* CSS umum yang berlaku untuk semua layar */
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* CSS untuk layar dengan lebar kurang dari 600px */
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%; /* Mengisi seluruh lebar layar */
+    }
+    
+    form {
+        max-width: 100%; /* Mengisi seluruh lebar layar */
+    }
+
+    label, input {
+        width: 100%; /* Mengisi seluruh lebar form */
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%; /* Mengisi seluruh lebar tombol */
+    }
+}
+</style>
 <body>
 
 <div class="card">

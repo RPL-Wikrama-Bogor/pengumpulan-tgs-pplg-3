@@ -3,6 +3,71 @@
 <head>
     <title>Penghasilan Penjualan Tiket Bioskop</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #F1DBBF;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 20px 0;
+        text-transform:capitalize;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(1, 1, 1, 0.3);
+        background-color: rgba(225,225,225,0.082);
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        background-color: #ccc;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #96B6C5;
+    }
+
+    @media (max-width: 768px) {
+        form {
+            margin: 20px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+        }
+
+      
+    }
+</style>
+
 <body>
     <h2>Penghasilan Penjualan Tiket Bioskop</h2>
     <form action="" method="post">
@@ -16,7 +81,7 @@
         Jumlah Tiket Terjual: <input type="number" name="tiket_ekonomi" required><br>
 
         <br>
-        <input type="submit" name="submit" value="Hitung Penghasilan">
+        <input id="teks_input" type="submit" name="submit" value="Hitung Penghasilan">
     </form>
 
     <?php

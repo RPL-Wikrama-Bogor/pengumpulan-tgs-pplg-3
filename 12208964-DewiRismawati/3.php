@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaji</title>
+    <title>Maximum Number</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,7 +30,6 @@
             margin-bottom: 5px;
         }
 
-        input[type="text"],
         input[type="number"] {
             width: 100%;
             padding: 10px;
@@ -57,41 +55,46 @@
         p.result {
             font-size: 18px;
             margin-top: 20px;
-            text-align: left;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <form action="" method="post">
-            <label for="nama">Masukkan Nama anda:</label>
-            <input type="text" name="nama" id="nama">
+            <div class="one">
+                <label for="angka_pertama">Masukkan Angka Pertama:</label>
+                <input type="number" name="angka_pertama" id="angka_pertama">
+            </div>
 
-            <label for="gaji_pokok">Masukkan Gaji Pokok anda:</label>
-            <input type="number" name="gaji_pokok" id="gaji_pokok">
+            <div class="two">
+                <label for="angka_kedua">Masukkan Angka kedua:</label>
+                <input type="number" name="angka_kedua" id="angka_kedua">
+            </div>
 
+            <div class="three">
+                <label for="angka_ketiga">Masukkan Angka ketiga:</label>
+                <input type="number" name="angka_ketiga" id="angka_ketiga">
+            </div>
+            
             <br>
             <button type="submit" name="submit">Kirim</button>
         </form>
         <?php
-        $nama = "";
-        $tunj;
-        $pjk;
-        $gaji_bersih;
-        $gaji_pokok;
+        $bil_satu;
+        $bil_dua;
+        $bil_tiga;
 
         if (isset($_POST['submit'])) {
-            $nama = $_POST['nama'];
-            $gaji_pokok = $_POST['gaji_pokok'];
+            $bil_satu = $_POST['angka_pertama'];
+            $bil_dua = $_POST['angka_kedua'];
+            $bil_tiga = $_POST['angka_ketiga'];
 
-            $tunj = (20 * $gaji_pokok) / 100;
-            $pjk = (15 * ($gaji_pokok + $tunj)) / 100;
-            $gaji_bersih = $gaji_pokok + $tunj - $pjk;
+            $terbesar = max($bil_satu, $bil_dua, $bil_tiga);
 
-            echo '<p class="result">Nama: ' . $nama . '<br>';
-            echo 'Tunjangan: Rp ' . $tunj . '<br>';
-            echo 'Pajak: Rp ' . $pjk . '<br>';
-            echo 'Gaji Bersih: Rp ' . $gaji_bersih . '</p>';
+            echo '<p class="result">Bilangan pertama: ' . $bil_satu . '<br>';
+            echo 'Bilangan kedua: ' . $bil_dua . '<br>';
+            echo 'Bilangan ketiga: ' . $bil_tiga . '<br>';
+            echo '<b>Bilangan terbesar: ' . $terbesar . '</b></p>';
         }
         ?>
     </div>
