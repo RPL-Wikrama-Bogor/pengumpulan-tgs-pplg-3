@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Pangram-ExtraLight;
+        }
+
+        @font-face {
+            font-family: Pangram-ExtraLight;
+            src: url(font/PangramSans-FreeForPersonalUse/Pangram-FullFamily-FreeForPersonalUse/Pangram-Regular.otf);
+        }
+
+
+        a {
+            float: right;
+            text-decoration: none;
+            color: black;
+            background-color: orange;
+            text-align: center;
+            padding: 15px;
+            /* padding: 20px 20px; */
+            /* atas bawah : kiri kanan */
+            /* padding 10px 15px 12px */
+            /* atas, kanan, dan kiri  bawah */
+            /* padding 10px 20px 30px 40px */
+            /* atas kanan bawah kiri */
+            /* padding: 20px; */
+            /* atas kanan bawah kiri */
+            border-radius: 20px;
+            margin: 20px;
+            margin-bottom: 50px;
+            border: 0.5 solid black;
+        } 
+        a:hover{
+            background-color: white;
+            transition: 0.5s;
+            border: 1px solid black;
+            color: black;
+        }
+
+        .wrap {
+            /* meriset sifat ngambang dari element di atasnya pake right karna diatasnya float right  */
+            /* setiap element yang diatasnya pake float, harus ditambahkan clear untuk riset "ngambangnya" */
+            clear: right;
+            
+        }
+
+        .text {
+            width: 48%;
+            float: left;
+            padding-right: 15px;
+            /* kalau pake widh % menambahkan padding/margin harus menghitung 
+            total % nya agar tidak 100% (disisain buat ukuran margin/padding: 
+            48+50: 98, 2%nya buat ukuran padding/margin) */
+        }
+
+        .gambar {
+            width: 50%;
+            float: right;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .card{
+            display: flex;
+            /* riset ulang float diatasnya (right dan left) */
+            clear: both;
+            /* flex direction: mengatur layout hori/verti row:
+            horizontal, coloumn: vertikal */
+            flex-direction: row;
+            /* justify-content: layout item didalamnya. 
+            center: ditengah, flex-start: kiri, flex-end: kanan, 
+            space-between: jarak kanan kiri item sama, space-around: 
+            kaya space-between tapi urutnya dibalik */
+            justify-content: center;
+        }
+
+        .kotak{
+            /* 25% agar masing2 kotak (yg ada 4) ukurannya sama, 25% 
+            karna 100% : 4 = 25% */
+            width: 25%;
+            margin: 3px;
+            margin-top: 100px;
+            text-align: center;
+            background-color: orange;
+            padding: 20px;
+        }
+        .kotak h5 {
+            font-size: 20px;
+            /* default tagnya ada property margin bawaan (ngasi 
+            jarak default auto) buat ilangim yang utama dan mengambil 
+            sifat terbaru: !important */
+            margin: 0 !important;
+        }
+        .kotak p {
+            margin-bottom: 0 !important;
+            font-size: 16px;
+        }
+
+        .kotak1{
+            /* karna body sudah kasih jarak kanan kiri pake padding 
+            biar kolom 1 ga ngikut styling margin-left:  10px dari yang kotak, 
+            dihilangkan dan dianggap yang dijalankan itu margin-left: nya 0 (jarak ke kiri amvil yang 
+            styling padding dari body) yang kotak 4 sama cuman dia jarak ke kanan;; */
+            margin-left: 0 !important;
+        }
+
+        .kotak4{
+            margin-right: 0 !important;
+        }
+
+        .content {
+            width: 100%;
+            height: 50%;
+            margin-top: 50px;
+
+        }
+        .form{
+            float: left ;
+            width: 50%;
+            background-color: rgb(246, 246, 246);
+            margin-left: 30px;
+            border-radius: 10px;
+            margin-bottom: 200px;
+            height: 670px;
+            clear: both;
+        }
+
+        .form h2{
+            text-align: center;
+        margin-bottom: 50px;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 10px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        form input{
+            border: none;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+         textarea{
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        form label{
+            margin-bottom: 10px;
+        }
+
+        form button{
+            padding: 10px;
+            width: 15%;
+            border-radius: 20px;
+            border: none;
+            background-color: orange;
+            margin-left: 85%;
+            cursor: pointer;
+        }
+
+        form button:hover{
+            background-color: gray;
+            transition: 0.5s;
+            color: white;
+        }
+
+        .keterangan{
+            float: right;
+            height: 50%;
+            width: 45%;
+        }
+        .keterangan h3{
+            text-align: start;
+        }
+
+        .ket1{
+            display: flex;
+            width: 95%;
+            height: 200px;
+            border: 1px solid black;
+            
+        }
+
+        .ket1 .isi{
+            font-size: 10px;
+            width: 300px;
+            margin-left: 20px;
+            margin-top: 15%;
+        }
+         .tanggal{
+            position: absolute;
+            font-size: 5px;
+            right: 50px;
+        }
+        .ket1 img{
+            width: 150px;
+            height: 100px;
+            margin-left: 40px;
+            margin-top: 80px;
+        }
+        .ket2{
+            display: flex;
+            width: 95%;
+            height: 200px;
+            border: 1px solid black;
+            margin-top: 50px;
+            
+        }
+
+        .ket2 .isi{
+            font-size: 10px;
+            width: 300px;
+            margin-left: 15px;
+            margin-top: 15%;
+        }
+         .tanggal{
+            position: absolute;
+            font-size: 5px;
+            right: 50px;
+        }
+        .ket2 img{
+            width: 150px;
+            height: 100px;
+            margin-left: 40px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="">Administrator</a>
+    </div>
+    <!-- pembungkus baris gambar dan text -->
+    <div class="wrap">
+        <div class="text">
+            <h3>Pengaduan masyarakat</h3>
+            <ol>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illo cumque ullam odit a cum
+                    consequuntur corrupti voluptas repellat officiis magnam ipsam ex error, quis molestias, nemo, esse
+                    sit maiores?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quibusdam dolorum, obcaecati
+                    doloribus dolore enim repellat blanditiis placeat, quas velit iusto iste, ab quasi facilis
+                    architecto nam incidunt voluptas fuga.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nam ad enim numquam earum tempore illo
+                    unde voluptas temporibus veniam. Molestiae tenetur, molestias beatae commodi expedita quibusdam
+                    nesciunt voluptate iste?</li>
+            </ol>
+        </div>
+        <div class="gambar">
+            <img src="Screen_Shot_2023-02-02_at_10.13.21.png" alt="">
+        </div>
+    </div>
+
+    <!-- pembungkus dari 4 kotak -->
+    <div class="card">
+        <div class="kotak kotak1">
+            <h5>Jumlah penduduk:</h5>
+            <p><b>1500</b></p>
+        </div>
+        <div class="kotak">
+            <h5>Jumlah desa:</h5>
+            <p><b>25</b></p>
+        </div>
+        <div class="kotak">
+            <h5>Jumlah kecamatan: </h5>
+            <p><b>10</b></p>
+        </div>
+        <div class="kotak kotak4">
+            <h5>Jumlah Kab/kota: </h5>
+            <p><b>2</b></p>
+        </div>
+    </div>
+    <!-- form pengaduan -->
+    <div class="content">
+        <!-- pembungkus form -->
+        <div class="form">
+            <form action="">
+                <h2><strong>Buat pengaduan</strong></h2>
+                <label for="">NIK: </label>
+                <input type="text">
+
+                <label for="">Nama Lengkap: </label>
+                <input type="text">
+
+                <label for="">No Telp</label>
+                <input type="text">
+
+                <label for="">Pengaduan: </label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <label for="">Upload Gambar Terkait: </label>
+                <input type="file" name="" id="">
+
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+            <!-- pembungkus card -->
+            <div class="keterangan">
+                <h3>Laporan pengaduan</h3>
+                <div class="ket1">
+                    <p class="isi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, maiores?</p>
+                    <p class="tanggal" style="font-size: 10px;">22 Juni 2022: GAMA HUSEN</p>
+                    <img src="Gambar-1-Kejadian-Bencana-Banjir-di-Baleendah-Kota-Bandung-www-indowartacom.jpg" alt="">
+                </div>
+                <div class="ket2">
+                    <p class="isi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, maiores?</p>
+                    <p class="tanggal" style="font-size: 10px;">22 Juni 2022: GAMA HUSEN</p>
+                    <img src="Gambar-1-Kejadian-Bencana-Banjir-di-Baleendah-Kota-Bandung-www-indowartacom.jpg" alt="">
+
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
