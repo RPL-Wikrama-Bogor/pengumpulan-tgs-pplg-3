@@ -1,3 +1,4 @@
+
 <!-- preparation -->
 <?php
 $arrAngka = [];
@@ -8,13 +9,11 @@ $rataRata;
 <!-- input -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Max, Min, Ave</title>
 </head>
-
 <body>
     <form action="" method="post">
         <div id="wrap">
@@ -29,7 +28,6 @@ $rataRata;
     </form>
     <script>
         let jumlahInput = 1;
-
         function tambahInput() {
             // untuk mendefinisikan variable pada JS menggunakan let/const : let untuk variable yg bisa berubah valuenya, const variable yg tdk bisa diubah valuenya
             // backtip ( `` ) digunakan untuk pembuatan string yang tidak satu baris : bisa dipake di php juga
@@ -41,7 +39,7 @@ $rataRata;
             `;
             // jumlah input di increments untuk mengetahui skrng jumlah inputnya uda ada berapa
             // jumlahInput = jumlahInput + 1;
-            jumlahInput += 1;
+            jumlahInput += 1; 
             // jumlahInput++
             // document : pengambil alihan baris kode HTML
             // getElementById : mengambil tag HTML yang memiliki id tersebut : selain itu, ada getElementByClass, getElementByTagName, querySelector tergantung identitas yg akan diambil
@@ -54,15 +52,14 @@ $rataRata;
     </script>
     <!-- proses -->
     <?php
-    if (isset($_POST['submit'])) {
-        $arrAngka = $_POST['angka'];
-        $nilaiTerbesar = max($arrAngka);
-        $nilaiTerkecil = min($arrAngka);
-        // array_sum : seluruh item arr dijumlahkan, count : menghitung jumlah item yg terdapat pada array
-        $rataRata = array_sum($arrAngka) / count($arrAngka);
-        echo "Nilai Terbesar : " . $nilaiTerbesar . "<br> Nilai Terkecil : " . $nilaiTerkecil . "<br> Rata-Rata : " . $rataRata;
-    }
+        if (isset($_POST['submit'])) {
+            $arrAngka = $_POST['angka'];
+            $nilaiTerbesar = max($arrAngka);
+            $nilaiTerkecil = min($arrAngka);
+            // array_sum : seluruh item arr dijumlahkan, count : menghitung jumlah item yg terdapat pada array
+            $rataRata = array_sum($arrAngka) / count($arrAngka);
+            echo "Nilai Terbesar : " . $nilaiTerbesar . "<br> Nilai Terkecil : " . $nilaiTerkecil . "<br> Rata-Rata : " . $rataRata;
+        }
     ?>
 </body>
-
 </html>
