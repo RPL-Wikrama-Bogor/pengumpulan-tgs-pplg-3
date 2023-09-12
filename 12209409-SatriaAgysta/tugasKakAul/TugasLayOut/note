@@ -1,0 +1,108 @@
+Html
+
+<div class="container">
+<div class="content">
+        <form method="post" action="result.php">
+        <h1>Laporan Mengenai Manga :</h1>
+            <label for="jam">Name : </label><br>
+            <input type="text" id="jam" name="jam" placeholder="harus berisi nama" required><br>
+            <label for="menit">Email :</label><br>
+            <input type="mail" id="menit" name="menit" placeholder="harus berisi email" required><br>
+            <label for="detik">No Telp :</label><br>
+            <input type="number" id="detik" name="detik" placeholder="harus berisi nomor telepon" required><br>
+            
+            <label for="detik">Saran :</label><br>
+            <textarea id="detik" name="detik"></textarea><br>
+            
+            <label for="detik">Upload Gambar :</label>
+            <input  style="background-color: #fff;" type="file" id="detik" name="detik" placeholder="maksimal 59" required><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="hasil">
+    <h1>Hasil Laporan :</h1>
+        <div class="context">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ullam magni. Ducimus facilis quam voluptas amet. Mollitia porro, minima id quaerat, iusto aperiam facilis maxime adipisci dolores dolore eveniet itaque.</p>
+        </div>
+        <div class="image1">
+            <img src="sk.jpg" alt="">
+        </div>
+        <div class="context">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ullam magni. Ducimus facilis quam voluptas amet. Mollitia porro, minima id quaerat, iusto aperiam facilis maxime adipisci dolores dolore eveniet itaque.</p>
+        </div>
+        <div class="image1">
+            <img src="sk.jpg" alt="">
+        </div>
+</div>
+</div>
+
+css
+
+label {
+    font-weight: bold;
+}
+
+input {
+    border: 1px solid #000;
+    width: 575px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #be2929;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f51010;
+    transform: scale(1.02);
+}
+
+.container {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding-bottom: 30px;
+}
+
+.hasil {
+    box-shadow: 8.5px 8.5px 7px 0 rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 600px;
+    position:inherit;
+	border: 0;
+    margin-left: 20px;
+    font-size: 15px;
+    float: right;
+}
+
+.content {
+    box-shadow: 8.5px 8.5px 7px 0 rgba(255, 255, 255, 0.786);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    width: 600px;
+    position: relative;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    float: left;
+}
+
+.image1 img {
+    max-width: 40%; /* Menghindari gambar melampaui lebar parent */
+	border-radius: 10px;
+}

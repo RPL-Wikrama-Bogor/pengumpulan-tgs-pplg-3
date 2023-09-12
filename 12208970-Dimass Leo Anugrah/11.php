@@ -4,11 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Your CSS styles for the page */
-        /* ... */
-    </style>
-    <title>Informasi Pegawai</title>
+    <title>soal 11</title>
 </head>
 
 <body>

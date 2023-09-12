@@ -1,0 +1,175 @@
+body{
+    padding: 20px;
+}
+
+.btn {
+    float: right;
+    text-decoration: none;
+    color: black;
+    background-color: orange;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.wrap {
+    clear: right;
+}
+
+.text{
+    width: 48%;
+    float: left;
+    padding-right: 15px ;
+}
+
+.gambar{
+    width: 50%;
+    float: right;
+}
+
+img{
+    width: 100%;
+}
+
+.card {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kotak {
+    width: 25%;
+    margin: 30px 10px 0;
+    text-align: center;
+    background-color: orange;
+    padding: 20px;
+}
+
+.kotak h5 {
+    font-size: 20px;
+    margin: 0 !important;
+}
+
+.kotak p {
+    margin-bottom: 0 !important;
+    font-size: 16px;
+}
+
+.kotak1 {
+    margin-left: 0 !important;
+}
+
+.kotak4 {
+    margin-right: 0 !important;
+}
+
+.container {
+    width: 640px;
+    background-color: rgb(226, 217, 217);
+    margin: 50px 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="file"],
+textarea {
+    width: 97%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    background-color: orange;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 565px;
+}
+
+button:hover {
+    background-color: rgb(0, 0, 0);
+    color: orange;
+}
+.keterangan{
+    float: right;
+    height: 50%;
+    width: 45%;
+}
+.keterangan h3{
+    text-align: start;
+}
+
+.ket1{
+    display: flex;
+    width: 95%;
+    height: 200px;
+    border: 1px solid black;
+    
+}
+
+.ket1 .isi{
+    font-size: 10px;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 15%;
+}
+ .tanggal{
+    position: absolute;
+    font-size: 5px;
+    right: 50px;
+}
+.ket1 img{
+    width: 150px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 80px;
+}
+.ket2{
+    display: flex;
+    width: 95%;
+    height: 200px;
+    border: 1px solid black;
+    margin-top: 50px;
+    
+}
+
+.ket2 .isi{
+    font-size: 10px;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 15%;
+}
+ .tanggal{
+    position: absolute;
+    font-size: 5px;
+    right: 50px;
+}
+.ket2 img{
+    width: 150px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top:80px;
+}
