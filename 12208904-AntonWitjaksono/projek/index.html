@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <a href="login.html">Administrator</a>
+    </div>
+    <!-- pembungkus baris gambar dan text -->
+    <div class="wrap">
+        <div class="text">
+            <h3>Pengaduan masyarakat</h3>
+            <ol>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illo cumque ullam odit a cum
+                    consequuntur corrupti voluptas repellat officiis magnam ipsam ex error, quis molestias, nemo, esse
+                    sit maiores?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quibusdam dolorum, obcaecati
+                    doloribus dolore enim repellat blanditiis placeat, quas velit iusto iste, ab quasi facilis
+                    architecto nam incidunt voluptas fuga.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nam ad enim numquam earum tempore illo
+                    unde voluptas temporibus veniam. Molestiae tenetur, molestias beatae commodi expedita quibusdam
+                    nesciunt voluptate iste?</li>
+            </ol>
+        </div>
+        <div class="gambar">
+            <img src="img/landing page.png" alt="">
+        </div>
+    </div>
+
+    <!-- pembungkus dari 4 kotak -->
+    <div class="card">
+        <div class="kotak kotak1">
+            <h5>Jumlah penduduk:</h5>
+            <p><b>1500</b></p>
+        </div>
+        <div class="kotak">
+            <h5>Jumlah desa:</h5>
+            <p><b>25</b></p>
+        </div>
+        <div class="kotak">
+            <h5>Jumlah kecamatan: </h5>
+            <p><b>10</b></p>
+        </div>
+        <div class="kotak kotak4">
+            <h5>Jumlah Kab/kota: </h5>
+            <p><b>2</b></p>
+        </div>
+    </div>
+    <!-- form input -->
+    <div class="form">
+        <form action="proses.php" method="post">
+            <div class="card1">
+                <h1 style="color: black;"><b>Buat Pengaduan</b></h1>
+                <div class="card-body">
+                    <tr>
+                        <td><label>NIK :</label></td><br>
+                        <td><input type="number" name="nik"></td>
+                        <br>
+                    </tr>
+                    <tr>
+                        <td><label>Nama Lengkap :</label></td><br>
+
+                        <td><input type="text" name="nama_lengkap"></td>
+                        <br>
+                    </tr>
+                    <tr>
+                        <td><label>No Telp :</label></td><br>
+                        <td><input type="number" name="no_telp"></td>
+                        <br>
+                    </tr>
+                    <tr>
+                        <td><label>Pengaduan :</label></td><br>
+                        <br>
+                        <textarea name="pengaduan" cols="30" rows="10"></textarea>
+                        <br>
+                    </tr>
+                    <tr>
+                        <br>
+                        <td><label>Upload Gambar Terkait :</label></td>
+                        <td><input type="file" name="gambar" style="color: #000;"></td><br>
+                    </tr>
+                    <br>
+                    <tr>
+                        <button type="submit" value="Kirim" name="submit">Kirim</button>
+
+                    </tr>
+                    <br>
+                </div>
+            </div>
+        </form>
+        <!-- tampilan -->
+
+        <div class="content">
+            <div class="keterangan">
+                <h3>Laporan pengaduan</h3>
+                <div class="ket1">
+                    <p class="isi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, maiores?</p>
+                    <p class="tanggal" style="font-size: 10px;">22 Juni 2022: ANTON WITJAKSONO</p>
+                    <img src="img/th.jpeg" alt="">
+                </div>
+                <div class="ket2">
+                    <p class="isi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, maiores?</p>
+
+
+                    <p class="tanggal" style="font-size: 10px;">22 Juni 2022: FAJARF</p>
+                    <img src="img/th.jpeg " alt="">
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

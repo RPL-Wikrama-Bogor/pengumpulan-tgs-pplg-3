@@ -4,28 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sakamoto Days</title>
-    <link rel="stylesheet" href="style.css"> <!-- Gantilah "styles.css" dengan nama file CSS Anda -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
         <a class="logo" href="#">MangaFoo</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#">Information</a></li>
-            </ul>
     </nav>
-
-<div class="header">
-    <img src="sakamoto.jpg" alt="">
-    <div class="overlay-text">
-            <h1>Sakamoto Days</h1>
-            <a class="button" href="https://komiku.id/manga/sakamoto-days/" target="blank">Read Manga Here!!!</a>
-        </div>
-</div>
-
-<h1 style="font-size: 45px; text-align: center; padding-bottom: 0;">About</h1>
 
 <div class="container">
     <div class="text">
@@ -36,60 +21,77 @@
             website Viz dan Aplikasi Manga Plus, serial ini memiliki genre; Action, Comedy.</p>
     </div>
     <div class="image">
-        <img src="sk.jpg" alt="">
+        <img src="saka.png" alt="">
     </div>
 </div>
 
-<h1 style="font-size: 45px; text-align: center; padding-bottom: 0;">Top 4 Character</h1>
+<h2 style="font-size: 30px; text-align: center; padding-bottom: 0;">Top 4 Character</h2>
 
 <div class="card-grid">
         <div class="card">
             <img src="1.jpeg" alt="Gambar 1">
             <h2>Mafuyu</h2>
-            <p>Deskripsi card 1.</p>
+            <p>Mafuyu Seba</p>
         </div>
         <div class="card">
             <img src="2.jpeg" alt="Gambar 1">
             <h2>Shin</h2>
-            <p>Deskripsi card 1.</p>
+            <p>Shin Asakura</p>
         </div>
         <div class="card">
             <img src="3.jpeg" alt="Gambar 1">
             <h2>Akira</h2>
-            <p>Deskripsi card 1.</p>
+            <p>Akira Akao</p>
         </div>
         <div class="card">
             <img src="4.jpeg" alt="Gambar 1">
             <h2>Sakamoto</h2>
-            <p>Deskripsi card 1.</p>
+            <p>Taro Sakamoto</p>
         </div>
 </div>
 
-<div class="hal">
-    <div class="content">
-        <form method="post" action="result.php">
-        <h1>Laporan Mengenai Manga :</h1>
-            <label for="jam">Name : </label>
-            <input type="text" id="jam" name="jam" min="0" max="23" placeholder="maksimal 23" required><br>
-            <label for="menit">Email :</label>
-            <input type="mail" id="menit" name="menit" min="0" max="59" placeholder="maksimal 59" required><br>
-            <label for="detik">No Telp :</label>
-            <input type="number" id="detik" name="detik" min="0" max="59" placeholder="maksimal 59" required><br>
-            <label for="detik">Saran :</label>
-            <input  style="height: 70px;" type="textarea" id="detik" name="detik" min="0" max="59" placeholder="maksimal 59" required><br><br>
-            <button type="submit">Submit</button>
-        </form>
+<div class="content">
+        <div class="form">
+            <form action="">
+                <h2><strong>Buat pengaduan</strong></h2>
+                <label for="">NIK: </label>
+                <input type="text">
+
+                <label for="">Nama Lengkap: </label>
+                <input type="text">
+
+                <label for="">No Telp</label>
+                <input type="text">
+
+                <label for="">Pengaduan: </label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <label for="">Upload Gambar Terkait: </label>
+                <input type="file" name="" id="">
+
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+            <div class="keterangan">
+                <h3>Laporan pengaduan</h3>
+                <div class="ket1">
+                    <p class="isi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, maiores?</p>
+                    <p class="tanggal" style="font-size: 10px;">22 Juni 2022: sagyra</p>
+                    <img src="sk.jpg" alt="">
+                </div>
+                <div class="ket2">
+                    <p class="isi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, maiores?</p>
+                    <p class="tanggal" style="font-size: 10px;">22 Juni 2022: sagyra</p>
+                    <img src="sk.jpg" alt="">
+
+                </div>
+            </div>
     </div>
-    <div class="hasil">
-    <h1>Hasil Laporan</h1>
-        <div class="context">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ullam magni. Ducimus facilis quam voluptas amet. Mollitia porro, minima id quaerat, iusto aperiam facilis maxime adipisci dolores dolore eveniet itaque.</p>
-        </div>
-        <div class="image1">
-            <img src="sk.jpg" alt="">
-        </div>
-</div>
-</div>
+
+<footer>
+    <p> Copyright &copy; Satria Agysta</p>
+</footer>
+
 
 </body>
 </html>
