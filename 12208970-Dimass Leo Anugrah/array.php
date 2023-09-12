@@ -33,3 +33,4 @@ echo "Setelah melakukan perbaikan untuk nilai <strong>72</strong>, saya mendapat
 // Mengurutkan nilai setelah perbaikan dari yang terbesar
 rsort($nilai_saya);
 echo "Sehingga sekarang, urutan nilai saya dari yang terbesar menjadi : <strong>" . implode(",", $nilai_saya) . "</strong><br>";
+?>
