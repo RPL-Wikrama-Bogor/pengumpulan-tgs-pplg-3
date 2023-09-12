@@ -52,7 +52,7 @@
         echo " <strong>$nilaiAkhir,</strong>";
         
     }
-
+?>
 
 
 
