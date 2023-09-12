@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(250, 212, 142);
+    padding: 7px 15px;
+    float: right;
+    border-radius:50px;
+}
+
+.landing {
+    clear: right;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.landing img {
+    width: 45rem;
+    margin-left: 5rem;
+    max-width: 100%;
+}
+
+.landing .buath2 ul li{
+padding: 12px;
+
+}
+
+.landing .buath2 h2{
+    margin-left: 12px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kolom {
+    width: 333px;
+    height: 110px;
+    background-color: orange;
+    margin: 8px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.kolom p {
+    text-align:center;  
+}
