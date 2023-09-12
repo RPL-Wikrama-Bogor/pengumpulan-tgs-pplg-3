@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bilangan Sesuai Input Pengguna</title>
 </head>
 <body>
-    <h1>Pengumpulan Tugas Flowchart PPLG XI-3</h1>
+
+<?php
+
+for ($i=1; $i <= 50; $i++) { 
+    echo $i;
+    echo "<br>";
+}
+
+?>
+
 </body>
 </html>
+

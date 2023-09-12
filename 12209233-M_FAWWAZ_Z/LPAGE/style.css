@@ -1,0 +1,284 @@
+        body {
+            padding: 8px;
+        }
+
+        .btn {
+            float: right;
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 187, 0);
+            padding: 10px 12px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+
+        .wrap {
+            clear: right;
+        }
+
+        .text {
+            float: left;
+            width: 45%;
+            padding-right: 15px;
+            font-size: 17px;
+            line-height: 30px;
+        }
+
+        .image {
+            float: right;
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* BAGIAN KOLOM */
+
+        .card {
+            clear: both;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: 250px;
+            height: 73px;
+            margin-top: 25px;
+            text-align: center;
+            background-color: rgba(255, 153, 0, 0.671);
+            padding: 5px 37px 2px;
+        }
+
+        .box h5 {
+            font-size: 20px;
+            margin-top: 3px;
+        }
+
+        .box p {
+            font-size: 20px;
+            margin-top: -18px;
+        }
+
+        /* BAGIAM FORM */
+
+        .card1 {
+            width: 45%;
+            background-color: rgb(236, 236, 236);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-top: 30px;
+
+        }
+
+        input[type=number],
+        [type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: rgba(255, 187, 0, 0.726);
+            color: rgb(0, 0, 0);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgba(255, 187, 0, 0.863);
+        }
+
+        .card1 h3 {
+            text-align: center;
+            color: #435334;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* BAGIAN LAPORAN */
+
+        .pos_lft img {
+            float: right;
+            bottom: 30%;
+            width: 47%;
+
+
+        }
+
+        .pos_lft {
+            position: absolute;
+            border: 2px solid #000;
+            padding: 30px 40px 30px 210px;
+            font-size: 16px;
+            width: 30%;
+            left: 50%;
+            top: 90%;
+        }
+
+        .pos_lft1 {
+            position: absolute;
+            border: 2px solid #000;
+            padding: 30px 40px 30px 210px;
+            font-size: 16px;
+            width: 30%;
+            left: 50%;
+            top: 125%;
+        }
+
+        .container h3 {
+            margin-top: -460px;
+            margin-left: 658px;
+        }
+
+        .img1 {
+            float: right;
+            bottom: 30%;
+            width: 47%;
+        }
+
+        .text1 {
+            margin-left: -180px;
+
+        }
+
+        .tgl {
+            left: 70%;
+            top: -2px;
+            white-space: nowrap;
+            font-size: 10px;
+            position: absolute;
+        }
+
+        /*LOGIN*/
+
+        .card2 {
+            width: 45%;
+            height: 240px;
+            margin-left: 350px;
+            align-items: center;
+            background-color: rgb(236, 236, 236);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-top: 480px;
+
+        }
+
+        .card2 input[type=text],
+        [type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            display: grid;
+        }
+
+        .masuk {
+            width: 15%;
+            height: 40px;
+            margin-bottom: -150px;
+            margin-left: 85%;
+            background-color: rgba(255, 187, 0, 0.726);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+
+        }
+
+
+        .batal {
+
+            width: 15%;
+            height: 40px;
+            margin-left: 67%;
+            margin-top: 1px;
+            background-color: rgba(209, 209, 209, 0.726);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .card2 input[type=submit]:hover {
+            background-color: rgba(255, 187, 0, 0.863);
+        }
+
+        .card2 h3 {
+            text-align: center;
+            color: #435334;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* FOOTER */
+
+        .table {
+            margin-left: -200px;
+        }
+
+        .table img {
+            width: 100px;
+        }
+
+        .table button {
+            width: 50px;
+            height: 25px;
+            background-color: rgb(255, 145, 0);
+            border: none;
+            border-radius: 50px;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            width:  1000px;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+        
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #a8a8a8;
+            color: rgb(0, 0, 0);
+        }
+        
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+    
+        tr:hover {
+            background-color: #ddd;
+        }
