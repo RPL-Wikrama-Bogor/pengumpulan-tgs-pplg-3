@@ -1,0 +1,198 @@
+* {
+    font-family: Pangram-ExtraLight;
+}
+
+@font-face {
+    font-family: Pangram-ExtraLight;
+    src: url(Pangram-FullFamily-FreeForPersonalUse/Pangram-ExtraBold.otf);
+}
+
+
+a {
+    float: right;
+    text-decoration: none;
+    color: black;
+    background-color: orange;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.wrap {
+    clear: right;
+
+}
+
+.text {
+    width: 48%;
+    float: left;
+    padding-right: 15px;
+}
+
+.gambar {
+    width: 50%;
+    float: right;
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    clear: both;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kotak {
+    width: 25%;
+    margin: 3px;
+    margin-top: 100px;
+    text-align: center;
+    background-color: orange;
+    padding: 20px;
+
+}
+
+.kotak h5 {
+    font-size: 20px;
+    margin: 0 !important;
+}
+
+.kotak p {
+    margin-bottom: 0 !important;
+    font-size: 16px;
+}
+
+.kotak1 {
+    margin-left: 0 !important;
+}
+
+.kotak4 {
+    margin-right: 0 !important;
+}
+
+.card1 {
+    width: 540px;
+    background: #EFEFEF;
+    color: #fff;
+    padding: 20px;
+    float: left;
+}
+
+.card h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.form {
+    margin: 15px;
+
+}
+
+input {
+    width: 490px;
+    height: 25px;
+    margin: 10px 0;
+}
+
+textarea {
+    width: 490px;
+}
+
+label {
+    color: #000;
+}
+
+button {
+    background: #FFC436;
+    width: 100px;
+    padding: 5px;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    float: right;
+}
+
+button:hover,
+button:focus,
+button:active {
+    transform: scale(1.1);
+}
+
+.card2 {
+    float: right;
+}
+
+.keterangan {
+    float: right;
+    height: 50%;
+    width: 45%;
+}
+
+.keterangan h3 {
+    text-align: start;
+}
+
+.ket1 {
+    display: flex;
+    width: 95%;
+    height: 200px;
+    border: 1px solid black;
+
+}
+
+.ket1 .isi {
+    font-size: 10px;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 15%;
+}
+
+.tanggal {
+    position: absolute;
+    font-size: 5px;
+    right: 50px;
+}
+
+.ket1 img {
+    width: 150px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+.ket2 {
+    display: flex;
+    width: 95%;
+    height: 200px;
+    border: 1px solid black;
+    margin-top: 50px;
+
+}
+
+.ket2 .isi {
+    font-size: 10px;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 15%;
+}
+
+.tanggal {
+    position: absolute;
+    font-size: 5px;
+    right: 50px;
+}
+
+.ket2 img {
+    width: 150px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 80px;
+}

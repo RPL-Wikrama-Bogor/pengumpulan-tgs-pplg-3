@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="" class="btn" type="submit">Administator</a>
+
+    <div class="wrap">
+        <div class="text">
+            <h1>PENGADUAN MASYARAKAT</h1>
+
+            <ol>
+                <li>Proses administrasi pengaduan masyarakat adalah rangkaian kegiatan yang dilakukan oleh penyelenggara
+                    pelayanan publik.</li>
+                <li>Surat pengaduan adalah surat yang diajukan apabila pemesan tidak puas dengan barang yang dipesannya.
+                </li>
+                <li>Setiap orang yang jadi koraban tindak pidana berhak mengajukan laporan atau pengaduan kepada
+                    penyelidik dan/atau penyidik baik lisan maupun tertulis.</li>
+                <li>Tujuan dibuatnya surat ini adalah untuk mengingatkan dan menagih pembeli agar melakukan pembayaran
+                    atas barang/jasa yang sudah diterima. </li>
+            </ol>
+        </div>
+        <div class="image">
+            <img src="./img/Screen_Shot_2023-02-02_at_10.13.21.png" alt="">
+        </div>
+        <div class="card">
+            <div class="box">
+                <h5>Jumlah Kecamatan</h5>
+                <p>15</p>
+            </div>
+            <div class="box">
+                <h5>Jumlah Desa</h5>
+                <p>42</p>
+            </div>
+            <div class="box">
+                <h5>Jumlah Penduduk</h5>
+                <p>1.400</p>
+            </div>
+            <div class="box">
+                <h5>Data Per Tahun</h5>
+                <p>2023</p>
+            </div>
+        </div>
+        <div class="card1">
+            <h3>BUAT PENGADUAN</h3>
+            <form action="" method="post">
+                <label for="nik">Masukan NIK</label>
+                <input type="number" id="nik" name="nik" placeholder="NIK" required>
+
+                <label for="nama">Masukan Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required>
+
+                <label for="tlp">Masukan No Telp</label>
+                <input type="number" id="tlp" name="tlp" placeholder="No Telp" required>
+
+                <label for="pgnd">Pengaduan</label>
+                <input type="text" id="pgnd" name="pgnd" placeholder="Pengaduan" required>
+
+                <label for="gambar">Upload Gambar Terkait</label>
+                <input type="file" id="gambar" name="gambar" required>
+
+
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+
+
+
+        <div class="container">
+            <h3>LAPORAN PENGADUAN</h3>
+            <div class="pos_lft">
+                <p class="tgl">13 Mei 2023 : Fawwaz Zahran </p>
+                <img src="./img/download.jpeg" alt="Contoh Gambar">
+                <p class="text1">Penuh nya lalu lintas di Gang Wikrama yang menyebabkan kemacetan
+                    yang menyebabkan sulitnya beraktivitas di pagi hari</p>
+            </div>
+            <div class="pos_lft1">
+                <p class="tgl">13 Mei 2023 : Fawwaz Zahran </p>
+                <img class="img1" src="./img/download.jpeg" alt="Contoh Gambar">
+                <p class="text1">Penuh nya lalu lintas di Gang Wikrama yang menyebabkan kemacetan
+                    yang menyebabkan sulitnya beraktivitas di pagi hari</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card2">
+        <h3>LOGIN ADMINISTATOR</h3>
+        <form action="" method="post">
+            <label for="nik">Masukan Nama</label>
+            <input type="text" id="nik" name="nama" placeholder="Nama" required>
+
+            <label for="nik">Masukan Nama</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <div class="button-container">
+                <button class="masuk">Masuk</button>
+                <button class="batal">Batal</button>
+            </div>
+            
+        </form>
+
+        <div class="footer">
+            <h3>LAPORAN KELUHAN</h3>
+            <a href="">Logout | Home</a>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>NIK</th>
+                        <th>Nama</th>
+                        <th>Telp</th>
+                        <th>Pengaduan</th>
+                        <th>Gambar</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1234567890</td>
+                        <td>Fawwaz Zahran</td>
+                        <td>555-555-5555</td>
+                        <td>Jalan menuju SMK Wikrama Bogor sempit karena jalan tidak 1 banjar</td>
+                        <td><img src="./img/Screen_Shot_2023-02-02_at_10.13.21.png" alt="Gambar Pengaduan"></td>
+                        <td>
+                            <button>Hapus</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+    </div>
+
+</body>
+
+</html>

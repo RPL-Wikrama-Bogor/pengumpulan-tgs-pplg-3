@@ -1,4 +1,5 @@
-<style>body {
+<style>
+body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
@@ -73,7 +74,7 @@ input[type="submit"] {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pencarian Juara Kelas</title>
+    <title>soal 18</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
