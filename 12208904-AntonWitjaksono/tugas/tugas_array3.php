@@ -1,8 +1,5 @@
     <?php
     ini_set('display_errors','Off');
-    ini_set('error_reporting', E_ALL );
-    define('WP_DEBUG', false);
-    define('WP_DEBUG_DISPLAY', false);
 
     $Nama_Makanan = 0;
     $Harga_Makanan = 0;
@@ -17,31 +14,39 @@
 
     $List_makanan = [
         [
-            "makanan" => "Nasi Goreng",
-            "harga" => 15000
+            "makanan" => "Gurami Goreng Terbang",
+            "harga" => 35000
         ],
         [
-            "makanan" => "Mie goreng",
-            "harga" => 10000
+            "makanan" => "Gurami Bakap Kecap",
+            "harga" => 35000
         ],
         [
-            "makanan" => "Kwetiau",
-            "harga" => 15000
+            "makanan" => "Ayam Bakar",
+            "harga" => 17000
         ],
+        [
+            "makanan" => "Ayam Goreng",
+            "harga" => 15000
+        ]
     ];
 
     $listMinuman = [
         [
             "minuman" => "Es Jeruk",
-            "harga" => 5000
+            "harga" => 3000
         ],
         [
-            "minuman" => "Teh Manis",
-            "harga" => 5000
+            "minuman" => "Es Teh",
+            "harga" => 2000
         ],
         [
-            "minuman" => "Jus Buah",
-            "harga" => 7000
+            "minuman" => "ES Extra Joss",
+            "harga" => 2000
+        ],
+        [
+            "minuman" => "Es Joshua",
+            "harga" => 3000
         ]
     ];
 
@@ -92,20 +97,148 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="tugas_array3.css">
         <title>KASIR</title>
     </head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.menu {
+    width: 30rem;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu__header {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #d50000;
+}
+
+.menu__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu__list li {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu__list li::before {
+    content: "• ";
+    color: #d50000;
+    margin-right: 10px;
+}
+
+.form {
+    width: 30rem;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form__button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #d50000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.form__button:hover {
+    background-color: #a00000;
+}
+
+.pembayaran {
+    width: 30rem;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pembayaran__header {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #d50000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px 0;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+    </style>
     <body>
         <div class="container">
             <div class="menu">
                 <h2 class="menu__header">Daftar Menu</h2>
                 <ol class="menu__list">
-                    <li>Menu : Nasi goreng <br>Harga : Rp. 15.000</li>
-                    <li>Menu : Mie goreng <br> Harga : Rp. 10.000</li>
-                    <li>Menu : Kwetiau <br> Harga : Rp. 15.000 </li>
-                    <li>Menu : Es Jeruk <br> Harga : Rp. 5.000</li>
-                    <li>Menu : Teh Manis <br> Harga : Rp. 5.000</li>
-                    <li>Menu : Jus Buah <br> Harga : Rp. 7.000</li>
+                <div class="table-wrapper">
+                    <table class="fl-table">
+                        <thead>
+                        <tr>
+                            <th>Makanan</th>
+                            <th>Minuman</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Gurami Goreng Terbang <br> Rp. 35.000</td>
+                            <td>Es Jeruk <br> Rp. 3.000</td>
+                        </tr>
+                        <tr>
+                            <td>Gurami Bakap Kecap <br> Rp. 35.000</td>
+                            <td>Es Teh <br> Rp. 2.000</td>
+
+                        </tr>
+                        <tr>
+                            <td>Ayam Bakar <br> Rp. 17.000</td>
+                            <td>Es Extra Joss <br> Rp. 2.000</td>
+
+                        </tr>
+                        <tr>
+                            <td>Ayam Bakar <br> Rp. 15.000</td>
+                            <td>Es Joshua <br> Rp. 3.000</td>
+
+                        </tr>
+                        <tbody>
+                    </table>
                 </ol>
             </div>
             <form method="POST" class="form">
