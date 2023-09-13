@@ -36,6 +36,7 @@ $menus = [
         'tipe' => 'makanan',
     ],
 ]
+//aku kaya
 ?>
 
 <div class="tampilan-awal">
