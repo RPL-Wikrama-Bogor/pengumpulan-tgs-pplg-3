@@ -18,7 +18,13 @@
           align-items: center;
           min-height: 90vh;
           margin-top: 50px;
+          background-image: url(img/pict9mario.gif);
+          background-size: cover;
 
+     }
+
+     h1 {
+          color: white;
      }
 
      h2 {
@@ -33,7 +39,7 @@
           border: 1px solid #ccc;
           border-radius: 15px;
           border: 1px solid transparent;
-          backdrop-filter: blur(1rem);
+          backdrop-filter: blur(10rem);
           box-shadow: 1.2rem 1.2rem 1.2rem rgba(0, 0, 0, 0.7);
           border-top-color: rgba(225, 225, 225, 0.1);
           border-left-color: rgba(225, 225, 225, 0.1);
@@ -48,6 +54,7 @@
 
      td {
           padding: 5px;
+          color: white;
      }
 
      select,
@@ -139,7 +146,7 @@
                     $harga = $listFilm[$filmId]['harga'];
 
                     if ($usia > $minUsia) {
-                         echo "<h2 style='color: green'>Hai $nama Silahkan Untuk Membayar Sebesar Rp. " . number_format($harga, 2, ',', '.') . "</h2>";
+                         echo "<h2 style='color: lightgreen'>Hai $nama Silahkan Untuk Membayar Sebesar Rp. " . number_format($harga, 2, ',', '.') . "</h2>";
                     } else {
                          echo "<h2 style='color: red'>Usia $nama belum cukup</h2>";
                     }
