@@ -24,26 +24,26 @@ if (isset($_POST["submit"])) {
     $total_makanan = $_POST["makanan"] * 15000;
     $_total_minuman = $_POST["minuman"] * 5000;
     $total = $total_makanan + $_total_minuman;
+    $tot = number_format($total, 2);
     $hasil = $_POST["makanan"] + $_POST["minuman"];
 
     if ($hasil >= 5) {
         $diskon = ($total * 10) / 100;
         $harga_total = $total - $diskon;
+        $tot = number_format($harga_total, 2);
     }
     if (isset($harga_total)) {
         echo "
         <script>
-        alert('Makanan yang anda pilih: $makanan, Minuman yang anda pilih: $minuman, Harga Total: RP.$harga_total (diskon 10% karena 5 kali pembelian)')
+        alert('Makanan yang anda pilih: $makanan, Minuman yang anda pilih: $minuman, Harga Total:  RP $tot (diskon 10% karena 5 kali pembelian)')
         document.location.href= 'array3.php';
         </script>
         ";
     }
 
-    echo "<p></p>";
-
     echo "
         <script>
-        alert('Makanan yang anda pilih: $makanan, Minuman yang anda pilih: $minuman, Harga Total: RP.$total')
+        alert('Makanan yang anda pilih: $makanan, Minuman yang anda pilih: $minuman, Harga Total: RP $tot')
         document.location.href= 'array3.php';
         </script>
         ";
@@ -173,11 +173,11 @@ if (isset($_POST["submit"])) {
             <ul>
                 <li>
                     <label for="makanan">How many packs of Meals:</label>
-                    <input type="text" name="makanan">
+                    <input type="text" name="makanan" required>
                 </li>
                 <li>
-                    <label for="minuman">How many packs  of Drinks:</label>
-                    <input type="text" name="minuman">
+                    <label for="minuman">How many packs of Drinks:</label>
+                    <input type="text" name="minuman" required>
                 </li>
             </ul>
             <button type="submit" name="submit">ORDER</button>
