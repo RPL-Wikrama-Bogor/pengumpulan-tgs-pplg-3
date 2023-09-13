@@ -1,19 +1,16 @@
 <?php
-$film = [
+$pilihan = [
     [
-        "judul" => "The Nun",
-        "min-usia" => "15",
-        "harga" => 35000,
+        "makan" => "Bakso",        
+        "harga" => 10000,
     ],
     [
-        "judul" => "Spiderman No Way Home",
-        "min-usia" => "15",
-        "harga" => 35000,
+        "makan" => "Mie Ayam",        
+        "harga" => 12000,
     ],
     [
-        "judul" => "Jakarta vs Everybody",
-        "min-usia" => "17",
-        "harga" => 20000,
+        "makan" => "Mie Ayam Bakso",
+        "harga" => 18000,
     ],
 ];
 
@@ -30,39 +27,38 @@ $diskon = 0.10; // 10% diskon
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tiket.css">
+    <link rel="stylesheet" href="tiket&makanan.css">
     <title>Document</title>
 </head>
 <body>
     <center>
     <div class="menu">
-        <h2>Daftar Film</h2>
+        <h2>Pilihan Menu Makanan</h2>
+        <p><h2>Mas Tukul</h2></p>
         <?php
-        foreach ($film as $data) { ?>
+        foreach ($pilihan as $data) { ?>
             <div class="film-list">
-                <span class="film-title"><?= $data["judul"]; ?></span>
+                <span class="film-title"><?= $data["makan"]; ?></span>
                 <div class="film-details">
-                    Minimum Usia: <?= $data["min-usia"]; ?> tahun<br>
                     Harga: Rp<?= $data["harga"]; ?>,00
                 </div>
             </div>
         <?php } ?>
     </div>
         <form action="" method="post">
-            <h2>Kasir Sederhana</h2>
-            <label for="usia">Usia</label>
-            <input type="number" name="usia" required>
+            <h2>Kasir Sederhana Bakso</h2>
             <br>
-            <label for="judul">Judul</label>
-            <select name="judul" id="judul" required>
+            <label for="menu">Menu Makanan</label>
+            <select name="menu" id="menu" required>
                 <?php
-                foreach ($film as $data) {
-                    echo "<option value='{$data['judul']}'>{$data['judul']}</option>";
+                foreach ($pilihan as $data) {
+                    echo "<option value='{$data["makan"]}'>{$data["makan"]}</option>";
                 }
                 ?>
             </select>
             <br>
-            <label for="total">Jumlah tiket yang dibeli</label>
+            <label for="total">Jumlah Menu yang di beli</label>
+            <p>beli 5 diskon 10%</p>
             <input type="number" name="total" required>
             <br>
             <button type="submit" name="kirim">Submit</button>
@@ -73,27 +69,22 @@ $diskon = 0.10; // 10% diskon
 </body>
 </html>
 
+
 <?php
 if (isset($_POST["kirim"])) {
-    $umur = $_POST["usia"];
-    $judul = $_POST["judul"];
-    $tiket = $_POST["total"];
+    $menu = $_POST["menu"];
+    $total = $_POST["total"];
 
-    foreach ($film as $data) {
-        if ($judul == $data["judul"]) {
-            if ($umur >= $data["min-usia"]) {
-                if ($tiket >= 5) {
-                    // Menghitung harga dengan diskon 10%
-                    $harga_diskon = $data['harga'] * $tiket * (1 - $diskon);
-                    echo "<div class='hasil'>Anda Berhasil Membeli tiket dengan harga diskon 10%: Rp" . $harga_diskon . ",00</div>";
-                } else {
-                    $total_harga = $data['harga'] * $tiket;
-                    echo "<div class='hasil'>Anda Berhasil Membeli tiket dengan harga Rp" . $total_harga . ",00</div>";
-                }
+    foreach ($pilihan as $data) {
+        if ($menu == $data["makan"]) {
+            if ($total >= 5) {
+                // Menghitung harga dengan diskon 10%
+                $harga_diskon = $data['harga'] * $total * (1 - $diskon);
+                echo "<div class='hasil'>Anda Berhasil Membeli $menu dengan harga diskon 10%: Rp" . number_format($harga_diskon, 2, ',', '.') . "</div>";
             } else {
-                echo "<div class='hasil'>Maaf, anda tidak bisa menonton film karena umur anda kurang dari " . $data['min-usia'] . " tahun</div>";
+                $total_harga = $data['harga'] * $total;
+                echo "<div class='hasil'>Anda Berhasil Membeli $menu dengan harga Rp" . number_format($total_harga, 2, ',', '.') . "</div>";
             }
-            break;
         }
     }
 }
