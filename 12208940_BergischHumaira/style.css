@@ -1,0 +1,59 @@
+:root {
+    --gradient: linear-gradient( 109.6deg,  rgba(177,173,219,1) 11.2%, rgba(245,226,226,1) 91.1% );
+}
+body {
+    min-height: 100vh;
+    background-color: #eaeaea;
+    background-image: var(--gradient);
+    background-size: 200%;
+    animation: animation 25s infinite alternate;
+    /* infinite agar animasi nya terus bergerak  */
+    /* alternate agar animasi nya tidak mulai dari awal tetapi mundur */
+}
+/* untuk membuat animasi menggunakan @keyframes */
+@keyframes animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+label {
+    font-size: 20px;
+}
+input {
+    margin-top: 20px;
+    width: 40%;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+button {
+    width: 50%;
+    height: 40px;
+    background-color: #ada8e7;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+}
+.card {
+    margin-top: 130px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 15px 16px;
+    width: 400px;
+    border-radius: 15px;
+    background-color: #fff;
+    
+}
+.card2 {
+    margin-top: 50px;
+    padding: 15px 16px;
+    width: 400px;
+    border-radius: 0 40px 0 40px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+    background-color: #ffffff;
+    font-size: 20px;
+    text-align: left;
+}
+
