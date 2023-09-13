@@ -1,0 +1,153 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+.flex-container{
+	display: flex; 
+	flex-wrap: wrap;
+	flex-direction: row; 
+	justify-content: center; 
+}
+
+.item{
+	width: 100px;
+	height: 70px;
+	background-color: #F7D060;
+	margin: 3px;
+	flex-grow:1; 
+	flex-shrink: 1;
+  text-align: center;
+  padding-top: 2.5%;
+}
+.button{
+  background-color: #F7D060;
+  margin-bottom: 15px ;
+  max-width: 100%;
+}
+.baris{
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 50px;
+	/* padding: 20px; */
+  clear: right;
+}
+ .kolom{
+  width: 750px;
+  max-width: 100%;
+  margin: 3px;
+  /* box-sizing: border-box; */
+	padding: 10px;
+  flex-direction: row;
+}
+.kolom1{
+  width: 48%;
+  float: left;
+  /* padding-right: 15px; */
+} 
+.kolom2{
+  flex-wrap: wrap;
+  flex-grow:1;
+  flex-shrink: 1;
+  width: 50%;
+  float: right;
+}
+/* kalau pake width % mau menambahkan padding/margin harus menghitung total % nya agar tidak 100% (disisain buat ukuran 
+margin/padding : 48+50 : 98, 2% nya buat ukuran padding/margin) */
+.card{
+  background-color: #EEEEEE;
+  /* margin-right: 56%; */
+  padding-bottom: 2%;
+  float:left;
+  width: 46%;
+}
+.jmlh{
+  margin-bottom: 5%;
+}
+input{
+  border:none;
+  margin-left:2.5%;
+  width: 95%;
+  border-radius: 5px;
+  margin-bottom: 1.5%;
+  height: 25px;
+}
+.pe{
+  height: 75px;
+}
+label{
+  margin-left:2%;
+}
+.btn{
+  background-color: #F7D060;
+  border:none;
+  border-radius: 35px; 
+  height: 25px; 
+  width: 60px;
+  margin-left: 85%;
+}
+.card1, .card2{
+  float:right;
+  width:53%;
+  /* width:100%; */
+}
+.card1 img{
+  width: 100px;
+  margin-left: 80%;
+  margin-bottom: 5px;
+}
+.card2 img{
+  width: 100px;
+  margin-left: 80%;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .baris {
+    flex-direction: column;
+  }
+
+  .kolom1 {
+    width: 100%; 
+    float: none;
+    padding-right: 0; 
+  }
+
+  .kolom2 {
+    width: 100%;
+    float: none;
+  }
+
+  .card {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card1,
+  .card2 {
+    width: 100%; 
+    float: none; 
+  }
+
+  .card1 img,
+  .card2 img {
+    width: 100px; 
+    margin-left: 0; 
+  }
+}
+
+footer {
+	display: flex;
+	background-color: #FFC95F;
+	/* position: fixed; */
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 45px;
+	width: 100%;
+  margin-top: 5%;
+	border-top: 1px solid white;
+	justify-content: center;
+	align-items: center;
+}
