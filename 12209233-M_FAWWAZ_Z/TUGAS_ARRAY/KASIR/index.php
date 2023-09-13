@@ -88,8 +88,43 @@
                 <label for="minuman">Berapa jumlah minuman : </label>
                 <input type="text" name="minuman">
                 <input type="submit" name="submit" value="Submit">
-        </form>
-    </div>
+</form>
+</div>
+</div>
+
+<div class="container">
+
+    <div class="header">
+            Struk Belanja
+        </div>
+        <div class="item">
+            <span><?php  
+            $makanan;
+            $minuman;
+            
+            if (isset($_POST["submit"])) {
+                $makanan = $_POST["makanan"];
+                $minuman = $_POST["minuman"];
+                $total_makanan = $_POST["makanan"] * 15000;
+                $_total_minuman = $_POST["minuman"] * 5000;
+                $total = $total_makanan + $_total_minuman;
+                $hasil = $_POST["makanan"] + $_POST["minuman"];
+            
+                if ($hasil >= 5) {
+                    $diskon = ($total * 10) / 100;
+                    $harga_total = $total - $diskon;
+                }
+                if (isset($harga_total)) {
+                    echo "
+                    Total Pesanan anda: RP.$harga_total diskon 10%";
+                } else
+            
+                    echo "
+                    Total Pesanan anda: RP.$total";
+            }
+ ?></span>
+        </div>
+</div>
 
 </body>
 
@@ -112,30 +147,5 @@ $minuman = [
     "5" => "Ice Coffe",
 ];
 
-$makanan;
-$minuman;
-
-if (isset($_POST["submit"])) {
-    $makanan = $_POST["makanan"];
-    $minuman = $_POST["minuman"];
-    $total_makanan = $_POST["makanan"] * 15000;
-    $_total_minuman = $_POST["minuman"] * 5000;
-    $total = $total_makanan + $_total_minuman;
-    $hasil = $_POST["makanan"] + $_POST["minuman"];
-
-    if ($hasil >= 5) {
-        $diskon = ($total * 10) / 100;
-        $harga_total = $total - $diskon;
-    }
-    if (isset($harga_total)) {
-        echo "
-        Makanan yang anda pesan: $makanan makanan, Minuman yang anda pesan: $minuman minuman, Harga Total: RP.$harga_total (diskon 10% karena 5 kali pembelian)
-        ";
-    } else
-
-        echo "
-        Makanan yang anda pesan: $makanan makanan, Minuman yang anda pesan: $minuman minuman, Harga Total: RP.$total
-        ";
-}
 
 ?>
