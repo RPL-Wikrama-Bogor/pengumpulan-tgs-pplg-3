@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
     $total_makanan = $_POST["makanan"] * 15000;
     $_total_minuman = $_POST["minuman"] * 5000;
     $total = $total_makanan + $_total_minuman;
-    $tot = number_format($tot, 2);
+    $tot = number_format($total, 2);
     $hasil = $_POST["makanan"] + $_POST["minuman"];
 
     if ($hasil >= 5) {
@@ -40,8 +40,6 @@ if (isset($_POST["submit"])) {
         </script>
         ";
     }
-
-    echo "<p></p>";
 
     echo "
         <script>
@@ -175,11 +173,11 @@ if (isset($_POST["submit"])) {
             <ul>
                 <li>
                     <label for="makanan">How many packs of Meals:</label>
-                    <input type="text" name="makanan">
+                    <input type="text" name="makanan" required>
                 </li>
                 <li>
                     <label for="minuman">How many packs of Drinks:</label>
-                    <input type="text" name="minuman">
+                    <input type="text" name="minuman" required>
                 </li>
             </ul>
             <button type="submit" name="submit">ORDER</button>
