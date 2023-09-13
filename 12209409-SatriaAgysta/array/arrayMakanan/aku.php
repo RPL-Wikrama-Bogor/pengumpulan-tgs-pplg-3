@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>JajanKu - Kantin Online</title>
 </head>
+
 <body>
 <?php 
 $menus = [
@@ -35,6 +36,7 @@ $menus = [
         'tipe' => 'makanan',
     ],
 ]
+//aku kaya
 ?>
 
 <div class="tampilan-awal">
