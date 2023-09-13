@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>JajanKu - Kantin Online</title>
 </head>
+
 <body>
 <?php 
 $menus = [

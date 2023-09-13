@@ -30,7 +30,7 @@
             <?php
             $movies = [
                 [
-                    'title' => 'Strong World',
+                    'title' => 'Strong',
                     'price' => 150000,
                 ],
                 [
