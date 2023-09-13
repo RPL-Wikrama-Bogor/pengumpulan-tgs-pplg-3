@@ -16,15 +16,9 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          min-height: 90vh;
+          min-height: 70vh;
           margin-top: 50px;
-          background-image: url(img/pict9mario.gif);
-          background-size: cover;
 
-     }
-
-     h1 {
-          color: white;
      }
 
      h2 {
@@ -39,12 +33,13 @@
           border: 1px solid #ccc;
           border-radius: 15px;
           border: 1px solid transparent;
-          backdrop-filter: blur(10rem);
+          backdrop-filter: blur(1rem);
           box-shadow: 1.2rem 1.2rem 1.2rem rgba(0, 0, 0, 0.7);
           border-top-color: rgba(225, 225, 225, 0.1);
           border-left-color: rgba(225, 225, 225, 0.1);
           border-bottom-color: rgba(225, 225, 225, 0.1);
           border-right-color: rgba(225, 225, 225, 0.1);
+          margin-top: 1px;
 
      }
 
@@ -54,7 +49,6 @@
 
      td {
           padding: 5px;
-          color: white;
      }
 
      select,
@@ -74,6 +68,24 @@
           cursor: pointer;
           margin-bottom: 10px;
      }
+
+   /* CSS untuk elemen SVG */
+svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Untuk menjaga aspek rasio SVG */
+    z-index: -1; /* Mengirimkan SVG ke lapisan belakang */
+}
+
+/* CSS untuk elemen lain di halaman */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 </style>
 
 <body>
@@ -85,12 +97,12 @@
                "harga" => 45000
           ],
           [
-               "judul" => "The Invitation",
-               "min-usia" => 17,
+               "judul" => "Spiderman No Way Home",
+               "min-usia" => 12,
                "harga" => 35000
           ],
           [
-               "judul" => "Luck",
+               "judul" => "Spongebob The Movie",
                "min-usia" => 7,
                "harga" => 35000
           ]
@@ -104,11 +116,11 @@
                     <h1>Daftar Film Bioskop</h1>
                     <tr>
                          <td>Nama : </td>
-                         <td><input type="text" name="nama"></td>
+                         <td><input type="text" name="nama" required></td>
                     </tr>
                     <tr>
                          <td>Usia : </td>
-                         <td><input type="number" name="usia"></td>
+                         <td><input type="number" name="usia" required></td>
                     </tr>
                     <tr>
                          <td>Film : </td>
@@ -146,9 +158,9 @@
                     $harga = $listFilm[$filmId]['harga'];
 
                     if ($usia > $minUsia) {
-                         echo "<h2 style='color: lightgreen'>Hai $nama Silahkan Untuk Membayar Sebesar Rp. " . number_format($harga, 2, ',', '.') . "</h2>";
+                         echo "<h2 style='color: black'>Hai $nama Silahkan Untuk Membayar Sebesar Rp. " . number_format($harga, 2, ',', '.') . "</h2>";
                     } else {
-                         echo "<h2 style='color: red'>Usia $nama belum cukup</h2>";
+                         echo "<h2 style='color: black'>Usia $nama belum cukup</h2>";
                     }
                }
 
@@ -156,5 +168,8 @@
           </form>
      </center>
 </body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L48,53.3C96,75,192,117,288,
+160C384,203,480,245,576,245.3C672,245,768,203,864,192C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,
+320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
 </html>

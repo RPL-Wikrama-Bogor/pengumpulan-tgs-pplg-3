@@ -18,27 +18,47 @@ $total_diskon_minuman = 0;
 
 $listMakanan = [
      [
-          "makanan" => "Nasi Goreng",
+          "makanan" => "Chicken Steak",
+          "harga" => 50000
+     ],
+     [
+          "makanan" => "Kentang Goreng",
+          "harga" => 20000
+     ],
+     [
+          "makanan" => "Telur Dadar",
+          "harga" => 20000
+     ],
+     [
+          "makanan" => "Spageti",
           "harga" => 15000
      ],
      [
-          "makanan" => "Mie goreng",
-          "harga" => 10000
-     ],
-     [
-          "makanan" => "Kwetiau",
+          "makanan" => "Salad Buah",
           "harga" => 15000
      ],
 ];
 
 $listMinuman = [
      [
-          "minuman" => "Es Jeruk",
-          "harga" => 5000
+          "minuman" => "Juice Alpukat",
+          "harga" => 15000
      ],
      [
-          "minuman" => "Teh Manis",
-          "harga" => 5000
+          "minuman" => "Juice Jambu",
+          "harga" => 15000
+     ],
+     [
+          "minuman" => "Milkshake Coklat",
+          "harga" => 20000
+     ],
+     [
+          "minuman" => "Milkshake Strawberry",
+          "harga" => 20000
+     ],
+     [
+          "minuman" => "Juice Kelapa",
+          "harga" => 15000
      ]
 ];
 
@@ -103,6 +123,7 @@ function diskon($jumlah)
                font-family: "Poppins", sans-serif;
                background-color: #f4f4f4;
                color: #333;
+
           }
 
           h1 {
@@ -113,6 +134,15 @@ function diskon($jumlah)
                max-width: 1200px;
                margin: 0 auto;
                padding: 20px;
+               border: 1px solid #ccc;
+               border-radius: 15px;
+               border: 1px solid transparent;
+               backdrop-filter: blur(10rem);
+               /* box-shadow: 1.2rem 1.2rem 1.2rem rgba(0, 0, 0, 0.7); */
+               border-top-color: rgba(225, 225, 225, 0.1);
+               border-left-color: rgba(225, 225, 225, 0.1);
+               border-bottom-color: rgba(225, 225, 225, 0.1);
+               border-right-color: rgba(225, 225, 225, 0.1);
           }
 
           .menu {
@@ -209,17 +239,41 @@ function diskon($jumlah)
 <body>
 
      <br>
-     <h1>Warung Makan Online</h1>
      <div class="container">
+          <h1>Warung Makan Online</h1>
+          <!-- <img width="150" class="img" src="img/warungmakan.jpeg" alt=""> -->
           <div class="menu">
-               <h2 class="menu__header">Daftar Menu</h2>
-               <ol class="menu__list">
-                    <li>Menu : Nasi goreng <br>Harga : Rp. 15.000</li>
-                    <li>Menu : Mie goreng <br> Harga : Rp. 10.000</li>
-                    <li>Menu : Kwetiau <br> Harga : Rp. 15.000 </li>
-                    <li>Menu : Es Jeruk <br> Harga : Rp. 5.000</li>
-                    <li>Menu : Teh Manis <br> Harga : Rp. 5.000</li>
-               </ol>
+               <h2 class="menu__header">Daftar Menu Restoran</h2>
+               <table class="menu__list">
+                    <thead>
+                         <tr>
+                              <th>Makanan</th>
+                              <th>Minuman</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                              <td>Menu : Chicken Steak <br />Harga : Rp. 50.000</td>
+                              <td>Menu : Juice Alpukat <br />Harga : Rp. 15.000</td>
+                         </tr>
+                         <tr>
+                              <td>Menu : Kentang Goreng <br />Harga : Rp. 20.000</td>
+                              <td>Menu : Juice Jambu <br />Harga : Rp. 10.000</td>
+                         </tr>
+                         <tr>
+                              <td>Menu : Telur Dadar <br />Harga : Rp. 20.000</td>
+                              <td>Menu : Milkshake Coklat <br />Harga : Rp. 10.000</td>
+                         </tr>
+                         <tr>
+                              <td>Menu : Spageti <br />Harga : Rp. 15.000</td>
+                              <td>Menu : Milkshake Strawberry <br />Harga : Rp. 20.000</td>
+                         </tr>
+                         <tr>
+                              <td>Menu : Salad Buah <br />Harga : Rp. 15.000</td>
+                              <td>Menu : Juice Kelapa <br />Harga : Rp. 15.000</td>
+                         </tr>
+                    </tbody>
+               </table>
           </div>
 
           <form method="POST" class="form">
