@@ -120,23 +120,23 @@ class Pembelian extends DataMotor
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Rental Dan Sewa Motor</title>
      <style>
-          /* Basic styling for the form container */
+
+
           .card {
-               max-width: 500px;
+               max-width: 700px;
                margin: 0 auto;
+               margin-top: 150px;
                padding: 20px;
                border: 1px solid #ccc;
-               border-radius: 5px;
-               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+               border-radius: 20px;
+               box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
           }
 
-          /* Styling for form labels */
           label {
                flex: 1;
                margin-right: 10px;
           }
 
-          /* Styling for form inputs */
           input[type="text"],
           input[type="number"],
           select {
@@ -147,7 +147,6 @@ class Pembelian extends DataMotor
                border-radius: 3px;
           }
 
-          /* Styling for the submit button */
           button[type="submit"] {
                background-color: #007BFF;
                color: white;
@@ -157,25 +156,29 @@ class Pembelian extends DataMotor
                cursor: pointer;
           }
 
-          /* Styling for the submit button on hover */
           button[type="submit"]:hover {
-               background-color: #0056b3;
+               background-color: grey;
+          }
+
+          .data{
+               display: flex;
           }
      </style>
 </head>
 
 <body>
+     
      <div class="card">
           <form action="" method="post">
-               <div style="display: flex;">
-                    <label for="nama">Masukan Nama Anda : </label>
+               <div class="data">
+                    <label for="nama">Masukan Nama : </label>
                     <input autofocus placeholder="Masukan Nama Anda.." type="text" name="nama" id="nama" required>
                </div>
-               <div style="display: flex;">
-                    <label for="waktu">Lama Waktu Rental : </label>
+               <div class="data">
+                    <label for="waktu">Lama Waktu : </label>
                     <input autofocus placeholder="Lama Waktu Rental.." type="number" name="waktu" id="waktu" required> 
                </div>
-               <div style="display: flex;">
+               <div class="data">
                     <label for="jenis" >Jenis Motor : </label>
                     <select name="jenis" require>
                          <option hidden disabled selected>Pilih Jenis Motor</option>
@@ -186,6 +189,7 @@ class Pembelian extends DataMotor
                </div>
                <button type="submit" name="sewa">Sewa Motor</button>
           </form>
+          
 
           <?php
           $logic = new Pembelian();
