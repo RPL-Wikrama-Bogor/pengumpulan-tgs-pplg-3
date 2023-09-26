@@ -43,7 +43,6 @@
                $logic->cetakBukti();
           }
           ?>
-
      </div>
 </body>
 
