@@ -6,15 +6,15 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
      <style>
-     body {
-          font-size: 1.5rem;
-          font-weight: 50px;
-          margin: 2rem;
-          padding: 2rem;
-          background-color: aqua;
-          text-align: center;
-          font-family: 'Poppins', sans-serif;
-     }
+          body {
+               font-size: 1.5rem;
+               font-weight: 50px;
+               margin: 2rem;
+               padding: 2rem;
+               background-color: aqua;
+               text-align: center;
+               font-family: 'Poppins', sans-serif;
+          }
      </style>
 </head>
 
@@ -58,8 +58,7 @@
      $total = round($rata_rata = $total / count($nilai));
      echo "<br>Jika di buat rata rata adalah $total";
 
-     echo "<br>Setelah melakukan perbaikan untuk nilai 72, saya mendapat nilai 75 jadi 
-     nilai saya sekarang :";
+     echo "<br>Setelah melakukan perbaikan untuk nilai 72, saya mendapat nilai 75 jadi nilai saya sekarang :";
      array_splice($update, 2, 1, 75);
      foreach ($update as $hasil_update) {
           echo " $hasil_update";
