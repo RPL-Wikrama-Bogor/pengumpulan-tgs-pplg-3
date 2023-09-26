@@ -1,0 +1,122 @@
+body {
+    padding: 2px;
+}
+.btn {
+    float: right;
+    text-decoration: none;
+    color: black;
+    background-color: #eceaa3;
+    padding: 15px 10px;
+    /* angka pertama buat mengatur atas dan bawah, kalo angka kedua buat mengatur kanan dan kiri  */
+    /* 13px 20px 4px */
+    /* angka pertama buat mengatur atas,angka kedua buat mengatur kanan dan kiri, angka ketiga buat mengatur bawah  */
+    /* 23px 43px 21px 32px */
+    /* angka pertama buat mengatur atas, angka kedua buat mengatur kanan, angka ketiga buat menagtur bawah, angka keempat buat mengatur kiri */
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+.wrap {
+    /* meriset sifat ngambang */
+    clear: right;
+}
+.text {
+    width: 48%;
+    float: left;
+    /* kalo pakai width % atau menambahkan padding margin harus 
+    mengitung total % agar tidak 100% (disisain buat ukuran 
+    margin/padding : 40-50  */
+    padding-right: 15px;
+    
+}
+.gambar {
+    width: 50%;
+    float: right;
+}
+img {
+    width: 100%;
+}
+.card {
+    /* riset ulang float datanya (right & left) */
+    clear: both;
+    display: flex;
+    /* flex direction mengatur input  */
+    flex-direction: row;
+    /* justify-content : layout item  didalamnya, center : ditengah, flex-start : kiri, flex-end : kanan ,
+    space-bottom : jarak kanan kiri tiap item sama, space-around kaya space bottom tapi urutannya dibalik */
+    justify-content: center;
+}
+.kotak {
+    width: 25%;
+    margin-right: 10px;
+    margin: 30px 10px 0;
+    text-align: center;
+    background-color: #eceaa3;
+    padding: 20px;
+
+}
+.kotak h5 {
+    margin: 0 !important;
+    font-size: 20px;
+}
+.kotak p {
+    margin-bottom: 0 !important;
+    font-size: 16px;
+}
+.kotak1 {
+    margin-left: 0 !important;
+}
+.kotak4 {
+    margin-right: 0 !important;
+}
+.wrap2 {
+    padding: 30px;
+}
+.form {
+    height: 100%;
+    width: 48%;
+    overflow: hidden;
+    background-color: #eaeaea;
+    clear: right;
+    float: left;
+}
+.data input {
+    width: 98%;
+    border: none;
+}
+textarea {
+    width: 98%;
+    height: 100px;
+    border: none;
+}
+.data {
+    padding: 10px 10px 10px 10px;
+}
+.submit {
+    float: right;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    border: none;
+    background-color: orange;
+}
+
+.laporan {
+    float: right;
+    width: 50%;
+}
+.laporan p {
+    float: right;
+}
+.image {
+    width: 20%;
+    float: right;
+    clear: right;
+}
+.card1 {
+    border: 1px black solid;
+}
+
+
+
