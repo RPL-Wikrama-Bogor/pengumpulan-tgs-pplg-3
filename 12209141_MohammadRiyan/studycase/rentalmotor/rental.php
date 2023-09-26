@@ -56,7 +56,7 @@ class DataMotor
      private $hargaScooter;
      private $hargaAerox;
      private $hargaVario;
-     private $listVIP = ['Fajar Fauzian', 'Gama Husen', 'Anton Witjaksono'];
+     private $listVIP = ['Mohammad Riyan', 'Gama Husen', 'Rama Daris'];
 
      public $jenisYangDipilih;
      public $lamaWaktu;
