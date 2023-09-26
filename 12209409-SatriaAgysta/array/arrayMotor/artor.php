@@ -51,7 +51,8 @@
     <?php
     class data
     {
-        protected $user = ['ikiew', 'sumihun', 'acuy'];
+        //update user
+        protected $user = ['Satria', 'Agysta', 'Sagyra'];
 
         public $ZX25R = 200000,
             $R1M = 120000,
