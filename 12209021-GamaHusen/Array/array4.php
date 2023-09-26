@@ -141,7 +141,7 @@ $dataHasilFilter = array_filter($data_siswa, "filterUmurLebihDari17");
             foreach ($dataHasilFilter as $siswa) {
         ?>
                 <div class="result-box">
-                    <p>Nama dari list yang bernilai lebih dari 17 tahun adalah: <?= $siswa["nama"] ?> </p>
+                    <p>Nama dari data yang berumur lebih dari 17 tahun adalah: <?= $siswa["nama"] ?> </p>
                 </div>
         <?php
             }
