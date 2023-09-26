@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    width: auto;
+    height: auto;
+    background-color: #040D12;
+}
+
+.kumpulan {
+    display:flex;
+    margin-top: 15%;
+}
+
+.input {
+    height: 30%;
+    width: 50%;
+    margin: 0 30px;
+    align-items: center;
+    justify-content: left;
+    display: grid;
+    padding: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+h2{
+    text-decoration:underline violet;
+}
+
+.hasil {
+    height: 30%;
+    width: 50%;
+    margin: 0 30px;
+    align-items: center;
+    justify-content: left;
+    display: grid;
+    padding: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+input {
+    width: 60vh;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 25px;
+}
+
+select {
+    width: 60.7vh;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 25px;
+}
+
+button {
+    border-radius: 10px;
+    width: 20vh;
+    height: 30px;
+    border: 1px solid violet;
+    background-color: violet;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(236, 62, 236);
+    color: #fff;
+    cursor: pointer;
+}
+
+.object {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.run {
+    width: 200%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: repeating-linear-gradient(200deg, transparent 0%, transparent 20px, violet 20px, violet 40px);
+    animation: moveWave 8s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; /* Menggunakan cubic bezier untuk interpolasi yang lebih lembut */
+}
+
+@keyframes moveWave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(bck.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.form {
+    display: content;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.form-beli {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 40%;
+    width: 35%;
+    background-color: rgb(75, 186, 167);
+    margin-top: 7%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #191717;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 40vh;
+    border: 1.5px solid #fff;
+    border-radius: 5px;
+    border-color: #fff;
+    box-shadow: 5px 5px 5px #191717;
+}
+
+select {
+    width: 41vh;
+    border: 1.5px solid #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.beli {
+    color: #fff;
+    text-decoration: underline rgb(22, 78, 101);
+    text-shadow: 5px 5px 5px #000;
+}
+
+.hasil {
+    color: #fff;
+    text-decoration: underline rgb(101, 88, 22);
+    text-shadow: 5px 5px 5px #000;
+}
+
+.form-hasil {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 40%;
+    width: 35%;
+    background-color: rgb(184, 186, 75);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: 5px 5px 5px #191717;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+
+body {
+    background-size: cover;
+}
+
+.form-beli {
+    height: 40%;
+    width: 60%;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+input {
+    width: 99%;
+}
+
+select {
+    width: 101%;
+}
+
+.form-hasil {
+    height: 40%;
+    width: 60%;
+}
+}
+
+@media (max-width: 720px) {
+
+    body {
+        background-size: cover;
+    }
+
+    .form-beli {
+        height: 40%;
+        width: 50%;
+    }
+    
+    h2 {
+        font-size: 25px;
+    }
+    
+    input {
+        width: 99%;
+    }
+    
+    select {
+        width: 101%;
+    }
+    
+    .form-hasil {
+        height: 40%;
+        width: 50%;
+    }
+    }

@@ -15,6 +15,8 @@ $tanggal_lahir;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bulan kelahiran</title>
+<<<<<<< HEAD:12208964-DewiRismawati/11.php
+=======
     <style>
         body{
             background-color: #E1ECC8;
@@ -33,7 +35,37 @@ $tanggal_lahir;
             background-color: #A0C49D;
         }
     </style>
+>>>>>>> cbbffb423c69adb7174c909a2eda92fe54ac86f5:12209291_Nabilaurrohmah/soal11.php
 </head>
+<style>
+/* CSS umum yang berlaku untuk semua layar */
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* CSS untuk layar dengan lebar kurang dari 600px */
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%; /* Mengisi seluruh lebar layar */
+    }
+    
+    form {
+        max-width: 100%; /* Mengisi seluruh lebar layar */
+    }
+
+    label, input {
+        width: 100%; /* Mengisi seluruh lebar form */
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%; /* Mengisi seluruh lebar tombol */
+    }
+}
+</style>
 <body>
     <center>
 <div class="card">

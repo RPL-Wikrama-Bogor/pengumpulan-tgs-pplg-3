@@ -175,6 +175,9 @@ img {
 }
 
 @media screen and (max-width: 1180px) {
+  .gambar {
+    width: 49%;
+  }
   .laporan {
     width: 49%;
   }
@@ -201,10 +204,24 @@ img {
     margin: 5px 0;
     border-radius: 9px;
   }
+
 }
 
-@media screen and (max-width: 809px) {
+@media screen and (max-width: 821px ) {
   .laporan {
     width: 47%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content .container{
+    width: 45%;
+  }
+
+  .laporan {
+    width: 47%;
+  }
+  .gambar{
+    width: 46%;
   }
 }

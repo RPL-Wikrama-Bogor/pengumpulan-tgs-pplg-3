@@ -1,0 +1,108 @@
+/* Gaya container menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Gaya item makanan */
+.item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 300px;
+    background-color: #cacaca;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya harga makanan */
+.harga {
+    font-weight: bold;
+    color: #ff5733; /* Warna harga */
+}
+
+/*BAGIAN FORM*/
+
+.card {
+    width: 50%;
+    background-color: rgb(139, 139, 139);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 20px;
+}
+
+input[type=number],
+[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: rgba(255, 187, 0, 0.726);
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(255, 187, 0, 0.863);
+}
+
+.card h3 {
+    text-align: center;
+    color: #435334;
+    display: flex;
+    justify-content: center;
+}
+
+.card h2 {
+    text-align: center;
+    color: #000000;
+}
+
+/*MENU*/
+
+.menu-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 221.4px;
+    display: inline-block;
+}
+
+.menu {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+ }
+
+ /*STRUK*/
+
+ .container {
+    width: 23%;
+    margin-left: 800px;
+    margin-top: -400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.item {
+    margin-bottom: 10px;
+}
