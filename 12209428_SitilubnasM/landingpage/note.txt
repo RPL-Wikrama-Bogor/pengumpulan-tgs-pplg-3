@@ -1,0 +1,4 @@
+display: flex; /* mengubah ke mode flexbox */
+	flex-wrap: wrap; /* mengatur item flexbox dapat diwrap/apabila container tidak cukup lagi untuk membungkus item, maka item akan diturunkan */ 
+	flex-direction: row; /* Mengatur arah item ke row/satu baris */
+	justify-content: center; /* mensejajarkan item selalu di tengah dalam satu baris */
