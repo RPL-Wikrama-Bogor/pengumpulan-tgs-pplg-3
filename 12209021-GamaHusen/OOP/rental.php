@@ -146,15 +146,15 @@ class Rental
             <ul>
                 <li>
                     <label for="pelanggan">Nama Pelanggan:</label>
-                    <input type="text" name="nama_pelanggan" id="pelanggan">
+                    <input type="text" name="nama_pelanggan" id="pelanggan" required>
                 </li>
                 <li>
                     <label for="lama_waktu">Lama waktu rental (per Hari):</label>
-                    <input type="text" name="lama_waktu" id="lama_waktu">
+                    <input type="text" name="lama_waktu" id="lama_waktu" required>
                 </li>
                 <li>
                     <label for="jenis_motor">Jenis Motor:</label>
-                    <select name="jenis_motor" id="jenis_motor" required>
+                    <select name="jenis_motor" id="jenis_motor" require`d>
                         <option value="">Pilih Jenis Motor</option>
                         <option value="NMAX">NMAX</option>
                         <option value="AEROX">AEROX</option>
