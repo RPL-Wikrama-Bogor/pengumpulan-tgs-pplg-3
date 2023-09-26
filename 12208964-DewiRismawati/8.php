@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaji</title>
+    <title>Angka</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,7 +30,6 @@
             margin-bottom: 5px;
         }
 
-        input[type="text"],
         input[type="number"] {
             width: 100%;
             padding: 10px;
@@ -57,49 +55,35 @@
         p.result {
             font-size: 18px;
             margin-top: 20px;
-            text-align: left;
         }
     </style>
 </head>
 <body>
-<<<<<<< HEAD:12208964-DewiRismawati/4.php
     <div class="container">
         <form action="" method="post">
-            <label for="nama">Masukkan Nama anda:</label>
-            <input type="text" name="nama" id="nama">
-
-            <label for="gaji_pokok">Masukkan Gaji Pokok anda:</label>
-            <input type="number" name="gaji_pokok" id="gaji_pokok">
-
+            <label for="angka">Masukkan angka:</label>
+            <input type="number" id="angka" name="angka">
             <br>
             <button type="submit" name="submit">Kirim</button>
         </form>
         <?php
-        $nama = "";
-        $tunj;
-        $pjk;
-        $gaji_bersih;
-        $gaji_pokok;
+        $angka;
+        $satuan;
+        $puluhan;
+        $ratusan;
 
         if (isset($_POST['submit'])) {
-            $nama = $_POST['nama'];
-            $gaji_pokok = $_POST['gaji_pokok'];
+            $angka = $_POST['angka'];
 
-            $tunj = (20 * $gaji_pokok) / 100;
-            $pjk = (15 * ($gaji_pokok + $tunj)) / 100;
-            $gaji_bersih = $gaji_pokok + $tunj - $pjk;
+            $satuan = floor($angka % 10);
+            $puluhan = floor($angka / 10) % 10;
+            $ratusan = floor(($angka % 1000) / 100);
 
-            echo '<p class="result">Nama: ' . $nama . '<br>';
-            echo 'Tunjangan: Rp ' . $tunj . '<br>';
-            echo 'Pajak: Rp ' . $pjk . '<br>';
-            echo 'Gaji Bersih: Rp ' . $gaji_bersih . '</p>';
+            echo '<p class="result">Angka satuan: ' . $satuan . '<br>';
+            echo 'Angka puluhan: ' . $puluhan . '<br>';
+            echo 'Angka ratusan: ' . $ratusan . '</p>';
         }
         ?>
     </div>
-=======
-    <form action="">
-        
-    </form>
->>>>>>> cbbffb423c69adb7174c909a2eda92fe54ac86f5:12209141_MohammadRiyan/LKPD/soal12/12datawaktu.php
 </body>
 </html>
