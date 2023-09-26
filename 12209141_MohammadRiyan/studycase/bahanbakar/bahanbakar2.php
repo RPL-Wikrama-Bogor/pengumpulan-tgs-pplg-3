@@ -29,6 +29,7 @@
 <?php
 
 require 'login.php';
+echo "test";
 $login = new Pembelian();
 $login->setHarga(10000,15000,18000,20000);
 if(isset($_POST['beli'])){
