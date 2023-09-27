@@ -1,12 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<center>
+     <div class="card">
+          <form action="" method="post">
+               <div style=""><br>
+                    <label for="nama">Masukan Nama Anda : </label>
+                    <input autofocus placeholder="Masukan Nama Anda.." type="text" name="nama" id="nama">
+               </div>
+               <div style=""><br>
+                    <label for="waktu">Lama Waktu Rental : </label>
+                    <input autofocus placeholder="Lama Waktu Rental.." type="number" name="waktu" id="waktu">
+               </div>
+               <div style=""><br>
+                    <label for="jenis">Jenis Motor : </label>
+                    <select name="jenis" require>
+                         <option hidden disabled selected>Pilih Jenis Motor</option>
+                         <option value="Scooter">Scooter</option>
+                         <option value="Aerox">Aerox</option>
+                         <option value="Vario">Vario</option>
+                    </select>
+               </div><br>
+               <button type="submit" name="sewa">Sewa Motor</button>
+               <br>
+          </form>
+</center>
+
+          <?php
+          $logic = new Pembelian();
+          $logic->setHarga(70000, 85000, 82000);
+          if (isset($_POST['sewa'])) {
+               $logic->nama_pengguna = $_POST['nama'];
+               $logic->lamaWaktu = $_POST['waktu'];
+               $logic->jenisYangDipilih = $_POST['jenis'];
+
+               $logic->cetakBukti();
+          }
+          ?>
+     </div>
+</body>
+
+</html>
 
 <?php
 class DataMotor
 // membuat objek kelas pembelian
 {
-     private $hargaPino;
+     private $hargaScooter;
      private $hargaAerox;
      private $hargaVario;
-     private $listVIP = ['Kenzi Badrika', 'Bintang Ardhian', 'Reyfal Meibiansyah'];
+     private $listVIP = ['Mohammad Riyan', 'Gama Husen', 'Rama Daris'];
 
      public $jenisYangDipilih;
      public $lamaWaktu;
@@ -24,9 +73,9 @@ class DataMotor
      }
 
      // mengatur harga motor-motor yang disewakan    
-     public function setHarga($Pino, $Aerox, $Vario)
+     public function setHarga($Scooter, $Aerox, $Vario)
      {
-          $this->hargaPino = $Pino;
+          $this->hargaScooter = $Scooter;
           $this->hargaAerox = $Aerox;
           $this->hargaVario = $Vario;
      }
@@ -48,7 +97,7 @@ class DataMotor
 
      public function getHarga()
      {
-          $semuaDataMotor["Pino"] = $this->hargaPino;
+          $semuaDataMotor["Scooter"] = $this->hargaScooter;
           $semuaDataMotor["Aerox"] = $this->hargaAerox;
           $semuaDataMotor["Vario"] = $this->hargaVario;
           return $semuaDataMotor;
@@ -79,7 +128,7 @@ class Pembelian extends DataMotor
           $dataHargaMotor = $this->getHarga();
 
           if (in_array($this->getListName(), $this->getListVIP())) {
-
+            
                echo "Nama Penyewa: " . ucfirst($this->getListName()) . "<br>";
 
                echo "Jenis Motor yang Disewa: " . ucfirst($this->jenisYangDipilih) . "<br>";
@@ -109,100 +158,8 @@ class Pembelian extends DataMotor
 
                echo "Total Bayaran : Rp. " . number_format($this->hargaRental(), 0, ',', '.') . "<br>";
           }
-     }
+    }
 }
+
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Rental Dan Sewa Motor</title>
-     <style>
-
-
-          .card {
-               max-width: 700px;
-               margin: 0 auto;
-               margin-top: 150px;
-               padding: 20px;
-               border: 1px solid #ccc;
-               border-radius: 20px;
-               box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-          }
-
-          label {
-               flex: 1;
-               margin-right: 10px;
-          }
-
-          input[type="text"],
-          input[type="number"],
-          select {
-               flex: 2;
-               padding: 10px;
-               margin-bottom: 10px;
-               border: 1px solid #ccc;
-               border-radius: 3px;
-          }
-
-          button[type="submit"] {
-               background-color: #007BFF;
-               color: white;
-               border: none;
-               padding: 10px 20px;
-               border-radius: 3px;
-               cursor: pointer;
-          }
-
-          button[type="submit"]:hover {
-               background-color: grey;
-          }
-
-          .data{
-               display: flex;
-          }
-     </style>
-</head>
-
-<body>
-     
-     <div class="card">
-          <form action="" method="post">
-               <div class="data">
-                    <label for="nama">Masukan Nama : </label>
-                    <input autofocus placeholder="Masukan Nama Anda.." type="text" name="nama" id="nama" required>
-               </div>
-               <div class="data">
-                    <label for="waktu">Lama Waktu : </label>
-                    <input autofocus placeholder="Lama Waktu Rental.." type="number" name="waktu" id="waktu" required> 
-               </div>
-               <div class="data">
-                    <label for="jenis" >Jenis Motor : </label>
-                    <select name="jenis" require>
-                         <option hidden disabled selected>Pilih Jenis Motor</option>
-                         <option value="Pino">Pino</option>
-                         <option value="Aerox">Aerox</option>
-                         <option value="Vario">Vario</option>
-                    </select>
-               </div>
-               <button type="submit" name="sewa">Sewa Motor</button>
-          </form>
-          
-
-          <?php
-          $logic = new Pembelian();
-          $logic->setHarga(70000, 85000, 82000);
-          if (isset($_POST['sewa'])) {
-               $logic->nama_pengguna = $_POST['nama'];
-               $logic->lamaWaktu = $_POST['waktu'];
-               $logic->jenisYangDipilih = $_POST['jenis'];
-
-               $logic->cetakBukti();
-          }
-          ?>
-
-     </div>
-</body>
-</html>
