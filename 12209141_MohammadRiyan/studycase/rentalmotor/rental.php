@@ -43,6 +43,7 @@
                $logic->cetakBukti();
           }
           ?>
+
      </div>
 </body>
 
@@ -55,7 +56,7 @@ class DataMotor
      private $hargaScooter;
      private $hargaAerox;
      private $hargaVario;
-     private $listVIP = ['Mohammad Riyan', 'Gama Husen', 'Rama Daris'];
+     private $listVIP = ['Fajar Fauzian', 'Gama Husen', 'Anton Witjaksono'];
 
      public $jenisYangDipilih;
      public $lamaWaktu;
