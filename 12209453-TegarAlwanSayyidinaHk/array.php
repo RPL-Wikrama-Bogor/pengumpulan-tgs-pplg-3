@@ -19,7 +19,7 @@ echo "Apabila diurutkan dari yang terkecil menjadi: " . implode(",", $nilai_saya
 
 // Mengurutkan nilai dari yang terbesar
 rsort($nilai_saya);
-echo "Apabila diurutkan dari yang terbesar menjadi: " . implode(",", $nilai_saya) . "<br>";
+echo "Apabila diugrutkan dari yang terbesar menjadi: " . implode(",", $nilai_saya) . "<br>";
 
 // Menghitung rata-rata
 $rata_rata = round(array_sum($nilai_saya) / count($nilai_saya));
@@ -33,4 +33,4 @@ echo "Setelah melakukan perbaikan untuk nilai 72, saya mendapat nilai 75 jadi ni
 // Mengurutkan nilai setelah perbaikan dari yang terbesar
 rsort($nilai_saya);
 echo "Sehingga sekarang, urutan nilai saya dari yang terbesar menjadi: " . implode(",", $nilai_saya) . "<br>";
-?>
+?>  
