@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+            <img src="<?= BASE_URL ?>/img/<?= $data['gambar'] ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Profile </h5>
+                <p class="card-text">
+                    Nama : <?= $data['nama']?>
+                    <br>
+                    Pekerjaan : <?= $data['pekerjaan']?>
+</p>
+<a href="<?= BASE_URL ?>/home/index" class="btn btn-primary">kembali</a>
+</div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
