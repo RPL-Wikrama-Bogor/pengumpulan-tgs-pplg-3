@@ -139,12 +139,12 @@ if (isset($_POST["submit"])) {
         <div class="eatlogo">
             <img src="img/eatlogo.png" alt="Logo">
         </div>
-        <h1>Order Your Meal</h1>
+        <h1>Mau Makan Apa?</h1>
         <form action="" method="post">
-            <label for="">Information: </label>
+            <label for="">Harga: </label>
             <ul>
-                <li>Meals: RP 15.000,00</li>
-                <li>Drinks: RP 5.000,00</li>
+                <li>Makanan: RP 15.000,00</li>
+                <li>Minuman: RP 5.000,00</li>
             </ul>
             <ul>
                 <li>
