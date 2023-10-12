@@ -70,8 +70,8 @@
             <button type="submit" name="submit" value="Cari">Cari</button>
         </form>
 
-        <?php
-        // Data siswa dalam bentuk array asosiatif
+<?php
+// Data siswa dalam bentuk array asosiatif
         $data_siswa = [
             [
                 'nis' => '12209657',
