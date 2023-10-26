@@ -1,19 +1,19 @@
 <?php
 $makanan = [
-    "1" => "Mie Goreng",
-    "2" => "Seblak",
-    "3" => "Padang",
-    "4" => "Bakso",
-    "5" => "Mie ayam",
+    "1" => "Mie Ayam",
+    "2" => "Doclang",
+    "3" => "Dimsum",
+    "4" => "Soto Ayam",
+    "5" => "Ayam Geprek",
     "6" => "Sate Ayam"
 ];
 $minuman = [
     "1" => "Es jeruk",
-    "2" => "Es teh",
-    "3" => "Es cokelat",
-    "4" => "Es Milo",
-    "5" => "Es kelapa",
-    "6" => "Jasjus"
+    "2" => "Es Kelapa",
+    "3" => "Teh D/P",
+    "4" => "Kopi D/p",
+    "5" => "Es Cendol",
+    "6" => "Es Doger"
 ];
 $makanan;
 $minuman;
