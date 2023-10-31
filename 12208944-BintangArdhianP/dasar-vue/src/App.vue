@@ -4,7 +4,7 @@
   <div v-html="kelas"></div> <br>
 
   <button :disabled="nonaktif">Button</button>
-  <h1 v-bind="property">RAF</h1>
+  <h1 v-bind="property">TANG</h1>
   <input :type="typeInput">
   <p>-----------data-binding----------------------</p>
   {{ count == 0 ? count + 1 : count + 2 }}
@@ -68,7 +68,7 @@ export default {
       numberComputed: 0,
       show: true,
       count: 5,
-      nama: 'Rafly',
+      nama: 'Bintang',
       number: '1',
       umur: '<h1>Kelas</h1>',
       nonaktif: false,
