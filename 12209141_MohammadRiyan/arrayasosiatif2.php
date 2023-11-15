@@ -1,28 +1,28 @@
 <?php
 $makanan = [
-    "1" => "Mie Ayam",
-    "2" => "Doclang",
-    "3" => "Dimsum",
-    "4" => "Soto Ayam",
-    "5" => "Ayam Geprek",
+    "1" => "Mie Goreng",
+    "2" => "Seblak",
+    "3" => "Padang",
+    "4" => "Bakso",
+    "5" => "Mie ayam",
     "6" => "Sate Ayam"
 ];
 $minuman = [
     "1" => "Es jeruk",
-    "2" => "Es Kelapa",
-    "3" => "Teh D/P",
-    "4" => "Kopi D/p",
-    "5" => "Es Cendol",
-    "6" => "Es Doger"
+    "2" => "Es teh",
+    "3" => "Es cokelat",
+    "4" => "Es Milo",
+    "5" => "Es kelapa",
+    "6" => "Jasjus"
 ];
 $makanan;
 $minuman;
 
 if (isset($_POST["submit"])) {
-    $makanan = $_POST["madang"];
+    $makanan = $_POST["mangan"];
     $minuman = $_POST["minum"];
     $total_makanan = $_POST["makanan"] * 15000;
-    $_total_minuman = $_POST["minuman"] * 5000;
+    $_total_minuman = $_POST["minuman"] * 8000;
     $total = $total_makanan + $_total_minuman;
     $tot = number_format($total, 2);
     $hasil = $_POST["makanan"] + $_POST["minuman"];
@@ -36,7 +36,7 @@ if (isset($_POST["submit"])) {
         echo "
         <script>
         alert('Makanan yang anda pilih: $makanan, Minuman yang anda pilih: $minuman, Harga Total:  RP $tot (diskon 10% karena 5 kali pembelian)')
-        document.location.href= 'pesanmakan.php';
+        document.location.href= 'arrayasosiatif2.php';
         </script>
         ";
     }
@@ -46,7 +46,7 @@ if (isset($_POST["submit"])) {
     echo "
         <script>
         alert('Makanan yang anda pilih: $makanan, Minuman yang anda pilih: $minuman, Harga Total: RP $tot')
-        document.location.href= 'pesanmakan.php';
+        document.location.href= 'arrayasosiatif2.php';
         </script>
         ";
 }
@@ -57,12 +57,12 @@ if (isset($_POST["submit"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order at KFC</title>
+    <title>Ride a Food</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-image: url(img/bg.jpg);
         }
 
         .container {
@@ -72,6 +72,7 @@ if (isset($_POST["submit"])) {
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
         h1 {
@@ -106,16 +107,17 @@ if (isset($_POST["submit"])) {
 
         button[type="submit"] {
             padding: 15px 20px;
-            background-color: #A73121;
+            background-color: #ECEE81;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            margin-left: 460px;
         }
 
         button[type="submit"]:hover {
-            background-color: #952323;
+            background-color: #EFD595;
         }
 
         p {
@@ -123,63 +125,59 @@ if (isset($_POST["submit"])) {
             margin-top: 20px;
         }
 
-        .eatlogo {
+        .logo {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .eatlogo img {
-            width: 150px;
+        .logo img {
+            width: 165px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="eatlogo">
-            <img src="img/eatlogo.png" alt="Logo">
+        <div class="logo">
+            <img src="https://thumbs.dreamstime.com/b/food-spoon-fork-vector-symbol-graphic-logo-design-template-food-spoon-fork-symbol-logo-design-121549456.jpg" alt="KFC Logo">
         </div>
-        <h1>Mau Makan Apa?</h1>
+        <h1>Pesan Makanan Anda!</h1>
         <form action="" method="post">
-            <label for="">Harga: </label>
-            <ul>
-                <li>Makanan: RP 15.000,00</li>
-                <li>Minuman: RP 5.000,00</li>
-            </ul>
             <ul>
                 <li>
-                    <label for="madang">Pesan Menu Makanmu:</label>
-                    <select name="madang" id="madang">
+                    <label for="mangan">Menu Makanan:</label>
+                    <select name="mangan" id="mangan" required>
                         <option value="">...</option>
                         <option value="<?php echo $makanan["1"] ?>">Mie Ayam</option>
-                        <option value="<?php echo $makanan["2"] ?>">Doclang</option>
-                        <option value="<?php echo $makanan["3"] ?>">Dimsum</option>
-                        <option value="<?php echo $makanan["4"] ?>">Soto Ayam</option>
-                        <option value="<?php echo $makanan["5"] ?>">Ayam Geprek</option>
-                        <option value="<?php echo $makanan["6"] ?>">Sate Ayam</option>
+                        <option value="<?php echo $makanan["2"] ?>">Mie Bakso</option>
+                        <option value="<?php echo $makanan["3"] ?>">Soto Mie</option>
+                        <option value="<?php echo $makanan["4"] ?>">Nasi Uduk</option>
+                        <option value="<?php echo $makanan["5"] ?>">Ketoprak</option>
+                        <option value="<?php echo $makanan["6"] ?>">Takoyaki</option>
                     </select>
                 </li>
+                <h7>*Harga: RP 15.000,00</h7>
                 <li>
-                    <label for="minum">Pesan Minumanmu:</label>
-                    <select name="minum" id="minum">
+                    <label for="minum">Menu Minuman:</label>
+                    <select name="minum" id="minum" required>
                         <option value="">...</option>
                         <option value="<?php echo $minuman["1"] ?>">Es jeruk</option>
-                        <option value="<?php echo $minuman["2"] ?>">Es Kelapa</option>
-                        <option value="<?php echo $minuman["3"] ?>">Teh D/P</option>
-                        <option value="<?php echo $minuman["4"] ?>">Kopi D/P</option>
-                        <option value="<?php echo $minuman["5"] ?>">Es Cendol</option>
-                        <option value="<?php echo $minuman["6"] ?>">Es Doger</option>
+                        <option value="<?php echo $minuman["2"] ?>">Es teh</option>
+                        <option value="<?php echo $minuman["3"] ?>">Kopi Hangat</option>
+                        <option value="<?php echo $minuman["4"] ?>">Milkshake</option>
+                        <option value="<?php echo $minuman["5"] ?>">Es Kelapa</option>
+                        <option value="<?php echo $minuman["6"] ?>">Es Cendol</option>
                     </select>
-                    <p>D = Dingin | P = Panas</p>
                 </li>
+                <h7>*Harga: RP 8.000,00</h7>
             </ul>
             <ul>
                 <li>
-                    <label for="makanan">Berapa banyak pesanan:</label>
+                    <label for="makanan">Jumlah Pesan Makanan:</label>
                     <input type="text" name="makanan" required>
-                </li>
+                </li
                 <li>
-                    <label for="minuman">Berapa banyak pesanan:</label>
+                    <label for="minuman">Jumlah Pesan Minuman:</label>
                     <input type="text" name="minuman" required>
                 </li>
             </ul>
