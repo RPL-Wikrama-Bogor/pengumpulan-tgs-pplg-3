@@ -1,0 +1,37 @@
+CYBERLAB 
+
+=> JavaScript 
+kemampuan untuk memberikan interaktivitas dan responsivitas pada situs web 
+
+- variabel 
+sebuah wadah atau tempat yang digunakan untk menyimpan data, digunakan 
+
+* var digunakan untuk mendeklarasi variabel dengan cakupan (scope) fungsi atau global dapat di deklarasikan ulang dan diperbaharui
+* let digunakan untuk varibael dengan cakupan hanya di dalam fungsi saja, dapat diperbaharui tapi tidak dapat dideklarasikan ulang
+* const tidak dapat diperbarui dan juga tidak dapat dideklarasikan ulang.
+
+cangkupan global itu artinya cangkupan bisa di panggil di luar function 
+let yang sifatnya blog hanya berpengaruh di function
+
+'' bisa memanggil petik "" ataupun kebalikann
+`` bisa memanggil variabel atau method 
+
+let data = {[nama, nis]} => objek
+let data = 
+
+fungsi untuk menghapus item dalam array splice, namun splice bisa untuk menambahkan, mengubah dan menghapus
+let angka = [1, 2, 3, 4, 5]
+angka.splice(2, 1) => menghapus index yang berada di index 2 dengan jumlah yang di hapus 1
+menambah (2, 0, 10)
+
+perbedaan array splice dan slice 
+>> array splice 
+   mengubah mennambah menghapus tetap array itu tidak menciptakan array baru
+>> array slice
+   menciptakan array baru  
+
+dibawah ini untuk mengganti dan menambahkan elemen array di akhir array
+shift()
+push()
+
+perbedaan array map() dan filter() dalam array 

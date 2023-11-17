@@ -9,10 +9,10 @@
             </div>
             <div class="form-group mb-3">
                 <label for="jenis_barang">Jenis Barang</label>
-                <select name="jenis_barang" id="jenis_barang" class="form-control">
-                    <option value="<?= $data['peminjaman']['jenis_barang']; ?>">laptop</option>
-                    <option value="<?= $data['peminjaman']['jenis_barang']; ?>">HP</option>
-                    <option value="<?= $data['peminjaman']['jenis_barang']; ?>">Adaptor LAN</option>
+                <select type="text" class="form-control" id="jenis_barang" name="jenis_barang" value="<?=  $data['barang']['jenis_barang']?>">
+                    <option value="laptop">laptop</option>
+                    <option value="HP">HP</option>
+                    <option value="Adaptor LAN">Adaptor Lan</option>
                 </select>
             </div>
             <div class="form-group mb-3">
