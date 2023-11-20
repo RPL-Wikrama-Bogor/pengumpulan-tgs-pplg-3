@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="addBook">
+        <h5>Add Book</h5>
+        <input type="text" id="author" placeholder="Author" name="author" style="margin-bottom: 10px;">
+        <input type="text" id="name" laceholder="nama" name="nama" style="margin-bottom: 10px;">
+        <input type="text" id="page_count" placeholder="Page Count" name="page_count" style="margin-bottom: 10px;">
+        <input type="text" id="publisher" placeholder="Publisher" name="publisher" style="margin-bottom: 10px;">
+        <input type="text" id="year" placeholder="Year" name="year" style="margin-bottom: 10px;">
+        <input type="submit" value="kirim"/>
+    </form>
+
+    <table border="1" id="data" style="margin-top: 30px;">
+    </table>
+
+    <script>
+        const url = "http://localhost:3000"
+        const elm_dataBuku = document.getElementById("getBooks")
+        async function getBooks(){
+            const api = await fetch(url)
+            const { data } = await api.json()
+            data.forEach((data) => {
+                const element_buku = document.createElement("div")
+                element_buku.innerHTML = `
+                Id: ${data.id},
+                Nama Buku: ${data.name},
+                Publisher: ${data.publisher},
+                Year: ${data.year},
+                Page count: ${data.page_count}`
+            elm_dataBuku.appendChild(element_buku)
+            })
+        }
+    </script>
+</body>
+
+</html>
