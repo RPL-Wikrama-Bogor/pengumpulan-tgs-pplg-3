@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    background-color: #0e0d0d;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    color: #F5FEFD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 35px;
+    color: #F5FEFD;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #f51010;
+}
+
+.baris {
+    box-sizing: border-box;
+}
+
+.container {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    gap: 25px;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.card p {
+    font-size: 12px;
+    color: #555;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+.form {
+    float: left;
+    width: 50%;
+    background-color: #f0f0f0;
+    margin-left: 30px;
+    border-radius: 10px;
+    margin-bottom: 200px;
+    height: 700;
+    clear: both;
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+form input {
+    border: none;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    border: none;
+    margin-bottom: 10px;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form button {
+    padding: 10px;
+    width: 15%;
+    border-radius: 20px;
+    border: none;
+    background-color: #f51010;
+    color: #fff;
+    margin-left: 85%;
+}
+
+.keterangan {
+    float: right;
+    height: 50%;
+    width: 45%;
+}
+
+.keterangan h3 {
+    text-align: start;
+}
+
+.ket1 {
+    display: flex;
+    width: 95%;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.ket1 .isi {
+    font-size: 10px;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 15%;
+}
+
+.ket1 img {
+    width: 150px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 80px;
+    border-radius: 5px;
+}
+
+.ket2 {
+    display: flex;
+    width: 95%;
+    height: 200px;
+    border: 1px solid black;
+    margin-top: 50px;
+}
+
+.ket2 .isi {
+    font-size: 10px;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 15%;
+}
+
+.ket2 img {
+    width: 150px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 80px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #0e0d0d;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}

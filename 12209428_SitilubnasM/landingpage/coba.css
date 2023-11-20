@@ -1,0 +1,10 @@
+.btn{
+    float: right;
+    text-decoration: none;
+    color: black;
+    background-color: orange;
+    /* padding : 10px 15px 12px 
+    angka pertama untuk atas, angka kedua untuk kanan dan kiri, angka ketiga untuk bawah
+    padding : 10px 15px 12px 11px
+    angka pertama untuk atas, angka kedua untuk kanan, angka ketiga untuk bawah, angka keempat untuk kiri */
+}

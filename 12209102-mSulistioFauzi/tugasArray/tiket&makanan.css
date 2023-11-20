@@ -1,0 +1,89 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* menu */
+.menu{
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+center {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* form */
+
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius:20px;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+.hasil {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border: 2px solid #aaa;
+    text-align: center;
+}
+
+
+
+
+/* tugas 2 bagian menu*/
+
+.film-list {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.film-title {
+    font-weight: bold;
+}
+
+.film-details {
+    margin-top: 5px;
+}
