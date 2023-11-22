@@ -1,0 +1,5 @@
+note js adalah lingkungan runtime(di translate selagi dia jalan) berbeasis js yang dibangun di atas mesin js v8 dari google chrome
+
+asynchronous programing
+express merupakan salah satu framework node.js paling populer digunakan untuk sistem backends
+salah satu yaitu memrlukan setup yang minimal yaiu html css js/api
