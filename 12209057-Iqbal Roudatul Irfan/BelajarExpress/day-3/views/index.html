@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form_book" action="">
+        <input type="text" placeholder="Author" name="author" style="margin-bottom: 10px;"> <br>
+        <input type="text" placeholder="Nama" name="nama" style="margin-bottom: 10px;"> <br>
+        <input type="text" placeholder="Page Count" name="page_count" style="margin-bottom: 10px;"> <br>
+        <input type="text" placeholder="Publisher" name="publisher" style="margin-bottom: 10px;"> <br>
+        <input type="text" placeholder="Year" name="year" style="margin-bottom: 10px;"> <br>
+        <button type="submit">Add Book</button>
+    </form>
+    <table border="1" id="data" style="margin-top: 30px;">
+    </table>
+    <script>
+        document.getElementById('form_book')
+            .addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(e.target);
+
+                try {
+                    let response = await fetch('http://localhost:3000/book', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(Object.fromEntries(formData.entries())),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP Error | Status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    console.log(result);
+
+                    // After adding the book, fetch and display the updated data
+                    await getData();
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+
+        const getData = async () => {
+            const response = await fetch('http://localhost:3000/book');
+            const books = await response.json();
+
+            // Clear existing table content
+            document.getElementById('data').innerHTML = '';
+
+            // Add header row
+            document.getElementById('data').innerHTML += '<tr> <th>Author</th> <th>Nama</th> <th>Page Count</th> <th>Publisher</th> <th>Year</th> </tr>';
+
+            // Populate table with data
+            books.forEach((book) => {
+                document.getElementById('data').innerHTML += `<tr>
+                    <td>${book.author}</td>
+                    <td>${book.nama}</td>
+                    <td>${book.page_count}</td>
+                    <td>${book.publisher}</td>
+                    <td>${book.year}</td>
+                </tr>`;
+            });
+        };
+
+        // Initial data load
+        getData();
+    </script>
+</body>
+
+</html>
