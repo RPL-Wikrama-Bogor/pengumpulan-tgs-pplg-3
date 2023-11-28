@@ -2,8 +2,10 @@ const express = require('express')
 const mysql = require('mysql2')
 const bookRoute = require('./routes/book')
 const authorRoute = require('./routes/author')
+const authRouter = require('./routes/auth')
 const dbConfig = require('./config/database')
 const pool = mysql.createPool(dbConfig)
+const authenticateJWT = require('./middlewere/auth')
 const cors = require('cors')
 
 pool.on('error', (err) => {
@@ -31,17 +33,10 @@ app.get('/contohparam', (req, res) => {
 app.get('/', (req, res) => {
     res.write('Hello world')
     res.end()
-
-    koneksi.query('select * from books', (err, result) => {
-        if(err){
-            console.log('error')
-        }else{
-            
-        }
-    })
 })
 
-app.use('/book', bookRoute)
+app.use('/auth', authRouter)
+app.use('/book', authenticateJWT, bookRoute)
 app.use('/author', authorRoute)
 
 app.listen(PORT, () => {
