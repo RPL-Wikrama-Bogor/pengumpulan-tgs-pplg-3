@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const books = [
+        {
+            title: "Harry Potter and the Sorcerer's Stone",
+          author: "J.K. Rowling",
+          genre: "Fantasy",
+          year: 1997,
+        },
+        {
+          title: "To Kill a Mockingbird",
+          author: "Harper Lee",
+          genre: "Fiction",
+          year: 1960,
+        },
+        {
+          title: "The Great Gatsby",
+          author: "F. Scott Fitzgerald",
+          genre: "Fiction",
+          year: 1925,
+        },
+      ];
+
+      function getFictionBooks() {
+        const fictionBooks = books.filter((book) => book.genre === "Fiction");
+        return fictionBooks;
+      }
+      const fictionBooksList = getFictionBooks();
+      console.log("Judul buku dengan genre 'Fiction':");
+      fictionBooksList.forEach((book) => {
+        console.log(book.title);
+      });
+    </script>
