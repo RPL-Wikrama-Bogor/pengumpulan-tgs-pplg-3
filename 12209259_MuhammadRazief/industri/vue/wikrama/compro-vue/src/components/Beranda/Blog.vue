@@ -1,0 +1,48 @@
+<template>
+    <div class="blog blog-section">
+            <h3>Blog</h3>
+            <div class="row-blog">
+                <Card></Card>
+            </div>
+        </div>
+</template>
+<script>
+import Card from '@/components/Blog/Card.vue';
+export default {
+    components:{
+        Card
+    }
+}
+</script>
+<style>
+.blog {
+    margin-top: 10px;
+}
+.blog-section{
+    margin-top: 80px !important;
+}
+
+.blog h3{
+    margin: auto;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 70px;
+    color: #042181;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.row-blog{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+@media screen and (max-width: 600px){
+    .row-blog{
+        display: grid;
+        grid-template-columns: 1,1fr;
+        grid-gap: 10px;
+    }
+}
+</style>
