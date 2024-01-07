@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const newProducts = [
+    {
+        name: "Kulkas",
+        price: 200,
+    },
+    {
+        name: "TV",
+        price: 300,
+    },
+    ];
+
+function averageProductPrice(products, newProducts) {
+    // Menggabungkan kedua array
+    const combinedProducts = [...products, ...newProducts];
+
+    // Menghitung total harga dari semua produk
+    const totalPrices = combinedProducts.reduce((total, product) => total + product.price, 0);
+
+    // Menghitung rata-rata
+    const averagePrice = totalPrices / combinedProducts.length;
+
+    return averagePrice;
+}
+    // Memanggil fungsi dan menampilkan rata-rata harga produk
+const average = averageProductPrice(products, newProducts);
+console.log("Rata-rata harga produk: " + average);
+    </script>
+        
