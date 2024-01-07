@@ -1,0 +1,18 @@
+perbedaan '', "" dan `` kutip 1 bisa memanggil kutip 2 sedangangkan `` agar bisa menggunakan variabel dll.
+let data = {[nama, nis]} => objek
+
+
+//untuk menghapus elemen pada array
+consts angka =[1, 2, 3, 4, 5]
+angka.splice(2, 1)
+console.log(angka)
+
+array splice
+mengubah menambah dan menghapus tetap array itu dan tidak menciptakan array batu
+array slice 
+menciptakan array baru
+
+shift () push () untuk menghapus dan mengubah elemen array di akhir array
+
+untuk menjumlahkan angka dalam angka 
+
